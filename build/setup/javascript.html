@@ -75,7 +75,7 @@
                                 Setup
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="setup"  class="hidden">
+                                                        <ul id="setup" >
                                                             <li >
                                     <a href=".././setup/getting-started.html">Getting started </a>
                                 </li>
@@ -88,7 +88,7 @@
                                                             <li >
                                     <a href=".././setup/css.html">CSS </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././setup/javascript.html">Javascript </a>
                                 </li>
                                                         </ul>
@@ -215,7 +215,7 @@
                                 Content
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="content" >
+                                                        <ul id="content"  class="hidden">
                                                             <li >
                                     <a href=".././content/boxes.html">Boxes </a>
                                 </li>
@@ -225,7 +225,7 @@
                                                             <li >
                                     <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././content/parallax.html">Parallax </a>
                                 </li>
                                                             <li >
@@ -364,71 +364,62 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Parallax</h1>
-    <p class="msg-warning">Parallax component is based on a mixin so you must include it to use it. Check the scss tab to see the code.</p>
-                                <div data-tc-modules="tabs">
-                <section id="tab-parallax-1" data-tc-name="Demo">
-            <div class="box-background" >
-                                                <section class="slide-1">
-	<div class="box-lighten">
-		<h1>Slide 1</h1>
-	</div>
-</section>
-<section class="slide-2">
-	<div class="box-lighten">
-		<h1>Slide 2</h1>
-	</div>
-</section>
-<section class="slide-3">
-	<div class="box-lighten">
-		<h1>Slide 3</h1>
-	</div>
-</section>                                            </div>
-        </section>
-                <section id="tab-parallax-2" data-tc-name="Code">
-            <div class="box-background">
-                <pre>
-	                <code data-tc-modules="code">&lt;section class=&quot;slide-1&quot;&gt;
-	&lt;div class=&quot;box-lighten&quot;&gt;
-		&lt;h1&gt;Slide 1&lt;/h1&gt;
-	&lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;slide-2&quot;&gt;
-	&lt;div class=&quot;box-lighten&quot;&gt;
-		&lt;h1&gt;Slide 2&lt;/h1&gt;
-	&lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;slide-3&quot;&gt;
-	&lt;div class=&quot;box-lighten&quot;&gt;
-		&lt;h1&gt;Slide 3&lt;/h1&gt;
-	&lt;/div&gt;
-&lt;/section&gt;</code>
-                </pre>
-            </div>
-        </section>
-                            <section id="tab-parallax-3" data-tc-name="Scss">
-                <div class="box-background">
-                <pre>
-	                <code data-tc-modules="code">@include parallax-slides(
-		// First part of the name for each slide (slide-1, slide-2)
-		&#039;slide&#039;,
+            <h1><span class="label-js fz-xl va-m">JS</span> Frontendcore Javascript setup</h1>
+    <section class="box-background">
+        <h2>1. Personalize the Global Settings</h2>
+        <p> The Global Settings are the Vars you need to personalize for each project.
+            Most of them are Paths to found files but there are also some general options. This is because core.js will access them, but it's not necessary to define them because all they have default values</p>
+        <p>These are the settings you can personalize and the default values:</p>
+        <pre><code data-tc-modules="code">&lt;script>
+var oGlobalSettings = {
+	// Defines the path of the Javascript
+	sPathJs : '/js/',
 
-		// height of each slide separated by comma
-		(300px,300px,300px,300px),
+	// Defines the path of the Javascript Core path (Where the core.js can be found)
+	sPathJsCore: oGlobalSettings.sPathJs + '../../',
 
-		// Url of each background image separate by comma
-		(
-			&#039;../../static/img/anti-bullying-tom-froese-wallpaper-1280x800.jpg&#039;,
-			&#039;../../static/img/brock-davis-wallpaper-1280x800.jpg&#039;,
-			&#039;../../static/img/dark-igloo-wallpaper-1-1280x800.jpg&#039;,
-			&#039;../../static/img/haik-avanian-wallpaper-1280x800.jpg&#039;
-		)
-);</code>
-                </pre>
-                </div>
-            </section>
-            </div>
+	// Defines the path where the Javascript Modules can be found
+	sPathJsModules : oGlobalSettings.sPathJs + 'modules',
 
+	// Defines the path where the Javascript Libs can be found
+	sPathJsLibs : oGlobalSettings.sPathJs + '../../',
+
+	// Defines the path where the CSS files can be found
+	sPathCss: './css/',
+
+	// Defines the path where the ui.css file can be found
+	sPathCssUi: oGlobalSettings.sPathCss + 'ui.css',
+
+	// Sends google analytics a call to get starts of calls an executions of the modules
+	bTrackModules: false,
+
+	// Defines the hash used to call all the static files ( example.js?v=).
+	// This is to avoid browser cache. The ideal is to update this number each deploy you do.
+	sHash: '1',
+
+	// Add or overwrite definitions to the RequireJS modules config.
+	// For example concatenate modals & tips to avoid too many requests and define them as one file.
+	oPaths: {},
+
+	// Set this to force always the mobile or desktop Javascript mode
+	sDevice: isMobile.any() ? 'mobile' : 'desktop',
+
+	// Activate or deactivate the responsive images module
+	bResponsiveImages: true,
+}
+&lt;/script></code></pre>
+        <p class="msg-warning">        <strong>You must declare them before the inclusion of the "core.js" file</strong> between script tags in your head.</p>
+    </section>
+    <section class="box-background">
+        <h2>2. Include the Core.js</h2>
+        <p>Includes the core js with the minimum scripts, from here is all async and depending on the DOM boot.</p>
+        <pre><code data-tc-modules="code">&lt;script src="components/frontendcore-js/core.js">&lt;/script></code></pre>
+    </section>
+    <section class="box-background">
+        <h2>3. Activate the Polyfills (optional)</h2>
+        <p>If you need to give suppor for IE9 or below this is a good idea, just call the module in the body Tag.</p>
+        <pre><code data-tc-modules="code">&lt;body data-tc-modules="polyfills"></code></pre>
+    </section>
     </div>
 </div>
 <footer class="footer box-primary">

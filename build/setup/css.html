@@ -75,7 +75,7 @@
                                 Setup
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="setup"  class="hidden">
+                                                        <ul id="setup" >
                                                             <li >
                                     <a href=".././setup/getting-started.html">Getting started </a>
                                 </li>
@@ -84,6 +84,12 @@
                                 </li>
                                                             <li >
                                     <a href=".././setup/installation.html">Installation </a>
+                                </li>
+                                                            <li  class="active">
+                                    <a href=".././setup/css.html">CSS </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././setup/javascript.html">Javascript </a>
                                 </li>
                                                         </ul>
                                                     </li>
@@ -106,12 +112,9 @@
                                 Architecture JS
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="architecture-js" >
+                                                        <ul id="architecture-js"  class="hidden">
                                                             <li >
                                     <a href=".././architecture-js/getting-started.html">Getting Started </a>
-                                </li>
-                                                            <li  class="active">
-                                    <a href=".././architecture-js/global-settings.html">Global Settings </a>
                                 </li>
                                                             <li >
                                     <a href=".././architecture-js/tools.html">Tools </a>
@@ -361,45 +364,49 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-js fz-xl va-m">JS</span> Global Settings</h1>
-    <p> The Global Settings are the Vars you need to personalize for each project.
-        Most of them are Paths to found files but there are also some general options. This is because core.js will access them, but it's not necessary to define them because all they have default values</p>
-    <p class="msg-warning">        <strong>You must declare them before the inclusion of the "core.js" file</strong> between script tags in your head.</p>
-    <p>These are the settings you can personalize and the default values:</p>
-    <pre><code data-tc-modules="code">var oGlobalSettings = {
-    // Defines the path of the Javascript
-    sPathJs : '/js/',
-
-    // Defines the path of the Javascript Core path (Where the core.js can be found)
-    sPathJsCore: oGlobalSettings.sPathJs + '../../',
-
-    // Defines the path where the Javascript Modules can be found
-    sPathJsModules : oGlobalSettings.sPathJs + 'modules',
-
-    // Defines the path where the Javascript Libs can be found
-    sPathJsLibs : oGlobalSettings.sPathJs + '../../',
-
-    // Defines the path where the CSS files can be found
-    sPathCss: './css/',
-
-    // Defines the path where the ui.css file can be found
-    sPathCssUi: oGlobalSettings.sPathCss + 'ui.css',
-
-    // Sends google analytics a call to get starts of calls an executions of the modules
-    bTrackModules: false,
-
-    // Defines the hash used to call all the static files ( example.js?v=). This is to avoid browser cache. The ideal is to update this number each deploy you do.
-    sHash: '1',
-
-    // Add or overwrite definitions to the RequireJS modules config. You can for example concatenate modals and tips and define modals and tips as a same file to avoid too many http requests.
-    oPaths: {},
-
-    // Set this to force always the mobile or desktop Javascript mode
-    sDevice: isMobile.any() ? 'mobile' : 'desktop',
-
-    // Activate or deactivate the responsive images module
-    bResponsiveImages: true,
-}</code></pre>
+        
+    <h1><span class="label-css fz-xl va-m">CSS</span> Frontendcore CSS setup</h1>
+    <p>First of all before do this you need to compile the scss into css, and of course <strong>remember to replace %PATH%</strong> for your case.</p>
+    <article class="box-background">
+        <h2>1. Add the meta viewport to the head</h2>
+        <p>With the combination of this meta and the grids of frontendcore your site will be responsive without a great effort.</p>
+        <pre><code data-tc-modules="code">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /></code></pre>
+    </article>
+    <article class="box-background">
+        <h2>2. Link the main.css</h2>
+        <p>The main.css is the most important file for your styles, include the link in the head of your page.</p>
+        <pre><code data-tc-modules="code">&lt;link rel="stylesheet" type="text/css"  href="%PATH%/main.css" media="all"></code></pre>
+    </article>
+    <article class="box-background">
+        <h2>3. Add Css fixes for IE9</h2>
+        <p>IE9 has some very specific issues with the css that are solved by this css, just add it to the head after the main css and between conditionals.</p>
+        <pre><code data-tc-modules="code">&lt;!--[if gte IE 9]>
+	&lt;link rel="stylesheet" type="text/css"  href="%PATH%/ie-new.css" media="all">
+&lt;![endif]-->
+</code></pre>
+    </article>
+    <article class="box-background">
+        <h2>4. Add Css fixes & Javascript polyfills for IE8 (optional)</h2>
+        <p>IE8 has no support for html5 tags, so you will need some javascript polyfills to make it work... and of course several css fixes. Just add them to the head after the main css and between conditionals.</p>
+        <pre><code data-tc-modules="code">&lt;!-- Css and JS for IE8 or below including a little script that notifies about old browser -->
+&lt;!--[if lte IE 8]>
+&lt;script src="js/ie-old.js">&lt;/script>
+&lt;link rel="stylesheet" type="text/css"  href="css/ie-old.css" media="all">
+&lt;script type="text/javascript">
+	var $buoop = {reminder: 0};
+	$buoop.ol = window.onload;
+	window.onload=function(){
+		try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+		var e = document.createElement("script");
+		e.setAttribute("type", "text/javascript");
+		e.setAttribute("src", "//browser-update.org/update.js");
+		document.body.appendChild(e);
+	}
+	&lt;/script>
+&lt;![endif]-->
+</code></pre>
+    </article>
+    <a href="javascript.html" class="icon-arrow-right fz-l"> <strong>Setup the Javascript</strong></a>
     </div>
 </div>
 <footer class="footer box-primary">
