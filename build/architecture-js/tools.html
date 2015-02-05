@@ -407,7 +407,7 @@
 
 	var oMergedJson = Object.create(oJson2); // Copying Source2 to a new Object
 
-	for (var attrname in oJson1) {
+	for ( var attrname in oJson1) {
 		if(oMergedJson.hasOwnProperty(attrname)) {
 			if ( oJson1[attrname]!=null && oJson1[attrname].constructor==Object ) {
 				 // Recursive call if the property is an object,
@@ -456,7 +456,7 @@ oTools.trackPage = function( sPage ) {
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.2</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.3</span></a></p>
     </div>
 </footer>
 </body>
