@@ -165,7 +165,10 @@
                                                             </a>
                                                         <ul id="navigation" >
                                                             <li  class="active">
-                                    <a href=".././navigation/navigation.html">Navigation <span class="fl-r cp">JS</span> </a>
+                                    <a href=".././navigation/navigation.html">Navigation </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././navigation/navigation-dropdown.html">Navigation dropdown <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
                                     <a href=".././navigation/navigation-sub.html">Subnavigation </a>
@@ -364,11 +367,11 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1>Navigation & Subnavigation</h1>
-
-    <section id="navigation" class="box-lighten">
-        <h2><span class="label-css fz-xl va-m">CSS</span> .navigation</h2>
-                                    <div data-tc-modules="tabs">
+                <h1><span class="label-css fz-xl va-m">CSS</span> Navigation</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box">     <h2>.navigation</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation">
@@ -400,8 +403,8 @@
         </section>
                     </div>
 
-        <h2><span class="label-css fz-xl va-m">CSS</span> .navigation .navigation-slim</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation .navigation-slim</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-slim-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation navigation-slim">
@@ -428,8 +431,8 @@
                     </div>
 
 
-        <h2><span class="label-css fz-xl va-m">CSS</span> .navigation with .form-search</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation with .form-search</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-search-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation">
@@ -463,8 +466,8 @@
         </section>
                     </div>
 
-        <h2><span class="label-css fz-xl va-m">CSS</span> .navigation .navigation-vertical</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation .navigation-vertical</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-vertical-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation navigation-vertical">
@@ -508,63 +511,8 @@
         </section>
                     </div>
 
-        <h2><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> .navigation with dropdown</h2>
-                                    <div data-tc-modules="tabs">
-                <section id="tab-navigation-dropdown-1" data-tc-name="Demo">
-            <div class="box-background" style="min-height:200px">
-                                                <nav class="navigation" data-tc-modules="dropdown">
-    <ul>
-        <li class="navigation-dropdown">
-            <a title="Fruits" href="#fruits">Fruits</a>
-            <ul id="fruits">
-                <li><a title="Oranges" href="#tab1">Oranges</a></li>
-                <li><a title="Apples" href="#tab2">Apples</a></li>
-                <li><a title="Bananas" href="#tab3">Bananas</a></li>
-            </ul>
-        </li>
-        <li class="navigation-dropdown">
-            <a title="Vegetables" href="#vegetables">Vegetables</a>
-            <ul id="vegetables">
-                <li><a title="Menu item 1" href="#tab1">Oranges</a></li>
-                <li><a title="Menu item 2" href="#tab2">Apples</a></li>
-                <li><a title="Menu item 3" href="#tab3">Bananas</a></li>
-            </ul>
-        </li>
-        <li><a title="Menu item 3" href="#tab3">Lettuce</a></li>
-    </ul>
-</nav>                                            </div>
-        </section>
-                <section id="tab-navigation-dropdown-2" data-tc-name="Code">
-            <div class="box-background">
-                <pre>
-	                <code data-tc-modules="code">&lt;nav class=&quot;navigation&quot; data-tc-modules=&quot;dropdown&quot;&gt;
-    &lt;ul&gt;
-        &lt;li class=&quot;navigation-dropdown&quot;&gt;
-            &lt;a title=&quot;Fruits&quot; href=&quot;#fruits&quot;&gt;Fruits&lt;/a&gt;
-            &lt;ul id=&quot;fruits&quot;&gt;
-                &lt;li&gt;&lt;a title=&quot;Oranges&quot; href=&quot;#tab1&quot;&gt;Oranges&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a title=&quot;Apples&quot; href=&quot;#tab2&quot;&gt;Apples&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a title=&quot;Bananas&quot; href=&quot;#tab3&quot;&gt;Bananas&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;navigation-dropdown&quot;&gt;
-            &lt;a title=&quot;Vegetables&quot; href=&quot;#vegetables&quot;&gt;Vegetables&lt;/a&gt;
-            &lt;ul id=&quot;vegetables&quot;&gt;
-                &lt;li&gt;&lt;a title=&quot;Menu item 1&quot; href=&quot;#tab1&quot;&gt;Oranges&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a title=&quot;Menu item 2&quot; href=&quot;#tab2&quot;&gt;Apples&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a title=&quot;Menu item 3&quot; href=&quot;#tab3&quot;&gt;Bananas&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;&lt;a title=&quot;Menu item 3&quot; href=&quot;#tab3&quot;&gt;Lettuce&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</code>
-                </pre>
-            </div>
-        </section>
-                    </div>
-
-        <h2><span class="label-css fz-xl va-m">CSS</span> .navigation and .navigation-sub</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation and .navigation-sub</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-subnavigation-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation">
@@ -604,65 +552,66 @@
         </section>
                     </div>
 
-    </section>
-
-        <section class="box-lighten">
+</div>
+        </section>
+        <section id="appearance" data-tc-name="Customize Appearance">
+                     <section class="box-lighten">
         <h2>Customize the appearance</h2>
-        <p class="msg-info">You can customize the appearance of this object by setting up in you config the following map. By defaults de values are the indicated here.</p>
-        <pre data-tc-modules="code">
-            <code data-tc-modules="scss-group" data-tc-group="vars">
-                /* @group vars */<br />
-$object-navigation-vars-default : (<br />
-<br />
-	// Background  first level:<br />
-	background-color: $color-primary,<br />
-<br />
-	// Background second level:<br />
-	background-color-dark: $color-primary-dark,<br />
-<br />
-	// Background gradients (from background-color to background-color-light)<br />
-	background-color-light: $color-primary-light,<br />
-<br />
-	// Link color<br />
-	color: contrast-color($color-primary),<br />
-<br />
-	// Border Radius<br />
-	border-radius: $default-border-radius,<br />
-<br />
-	// Font family first level<br />
-	font-family: $font-face-default,<br />
-<br />
-	// Font weight first level<br />
-	font-weight: normal,<br />
-<br />
-	// Font size first level<br />
-	font-size: $font-size-m,<br />
-<br />
-	// Font family inner levels<br />
-	inner-font-family: $font-face-default,<br />
-<br />
-	// Font weight inner levels<br />
-	inner-font-weight: normal,<br />
-<br />
-	// Font size inner levels<br />
-	inner-font-size: $font-size-s,<br />
-<br />
-	// Vertical separator for first level<br />
-	vertical-separator: true,<br />
-<br />
-	// Object style (Default or tabbed)<br />
-	style: default<br />
-<br />
-) !global !default;<br />
-/* @group vars */<br />
-<br />
-<br />
-$object-navigation-vars-custom: () !global !default;<br />
-<br />
-$object-navigation-vars : map-merge($object-navigation-vars-default, $object-navigation-vars-custom) !global;            </code>
-        </pre>
+        <p>You can customize the appearance of this object by setting up in you config the following map. By defaults de values are the indicated here.</p>
+        <pre data-tc-modules="code"><code data-tc-modules="scss-group" data-tc-group="vars">/* @group vars */
+
+$object-navigation-vars-default : (
+
+	// Background  first level:
+	background-color: $color-primary,
+
+	// Background second level:
+	background-color-dark: $color-primary-dark,
+
+	// Background gradients (from background-color to background-color-light)
+	background-color-light: $color-primary-light,
+
+	// Link color
+	color: contrast-color($color-primary),
+
+	// Border Radius
+	border-radius: $default-border-radius,
+
+	// Font family first level
+	font-family: $font-face-default,
+
+	// Font weight first level
+	font-weight: normal,
+
+	// Font size first level
+	font-size: $font-size-m,
+
+	// Font family inner levels
+	inner-font-family: $font-face-default,
+
+	// Font weight inner levels
+	inner-font-weight: normal,
+
+	// Font size inner levels
+	inner-font-size: $font-size-s,
+
+	// Vertical separator for first level
+	vertical-separator: true,
+
+	// Object style (Default or tabbed)
+	style: default
+
+) !global !default;
+
+/* @endgroup vars */
+
+$object-navigation-vars-custom: () !global !default;
+
+$object-navigation-vars : map-merge($object-navigation-vars-default, $object-navigation-vars-custom) !global;</code></pre>
     </section>
 
+         </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">

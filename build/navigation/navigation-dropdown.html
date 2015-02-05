@@ -143,7 +143,7 @@
                                 Typography
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="typography" >
+                                                        <ul id="typography"  class="hidden">
                                                             <li >
                                     <a href=".././typography/titles.html">Titles </a>
                                 </li>
@@ -153,7 +153,7 @@
                                                             <li >
                                     <a href=".././typography/lists.html">Lists </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././typography/labels.html">Labels </a>
                                 </li>
                                                         </ul>
@@ -163,11 +163,11 @@
                                 Navigation
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="navigation"  class="hidden">
+                                                        <ul id="navigation" >
                                                             <li >
                                     <a href=".././navigation/navigation.html">Navigation </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././navigation/navigation-dropdown.html">Navigation dropdown <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -367,88 +367,124 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Labels</h1>
-    <section class="box-lighten">
-        <h2>Default Labels</h2>
-                                    <div data-tc-modules="tabs">
-                <section id="tab-labels-default-1" data-tc-name="Demo">
-            <div class="box-background" >
-                                                <p>
-	<span class="label">Neutral Label</span>
-
-	<span class="label-ok">Success Label</span>
-
-	<span class="label-ko">Error Label</span>
-
-	<span class="label-warning">Warning Label</span>
-
-	<span class="label-info">Info Label</span>
-</p>
-                                            </div>
+                <h1><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Navigation with Dropdown</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box">     <h2> .navigation with dropdown</h2>
+                                <div data-tc-modules="tabs">
+                <section id="tab-navigation-dropdown-1" data-tc-name="Demo">
+            <div class="box-background" style="min-height:200px">
+                                                <nav class="navigation" data-tc-modules="dropdown">
+    <ul>
+        <li class="navigation-dropdown">
+            <a title="Fruits" href="#fruits">Fruits</a>
+            <ul id="fruits">
+                <li><a title="Oranges" href="#tab1">Oranges</a></li>
+                <li><a title="Apples" href="#tab2">Apples</a></li>
+                <li><a title="Bananas" href="#tab3">Bananas</a></li>
+            </ul>
+        </li>
+        <li class="navigation-dropdown">
+            <a title="Vegetables" href="#vegetables">Vegetables</a>
+            <ul id="vegetables">
+                <li><a title="Menu item 1" href="#tab1">Oranges</a></li>
+                <li><a title="Menu item 2" href="#tab2">Apples</a></li>
+                <li><a title="Menu item 3" href="#tab3">Bananas</a></li>
+            </ul>
+        </li>
+        <li><a title="Menu item 3" href="#tab3">Lettuce</a></li>
+    </ul>
+</nav>                                            </div>
         </section>
-                <section id="tab-labels-default-2" data-tc-name="Code">
+                <section id="tab-navigation-dropdown-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;p&gt;
-	&lt;span class=&quot;label&quot;&gt;Neutral Label&lt;/span&gt;
-
-	&lt;span class=&quot;label-ok&quot;&gt;Success Label&lt;/span&gt;
-
-	&lt;span class=&quot;label-ko&quot;&gt;Error Label&lt;/span&gt;
-
-	&lt;span class=&quot;label-warning&quot;&gt;Warning Label&lt;/span&gt;
-
-	&lt;span class=&quot;label-info&quot;&gt;Info Label&lt;/span&gt;
-&lt;/p&gt;
-</code>
+	                <code data-tc-modules="code">&lt;nav class=&quot;navigation&quot; data-tc-modules=&quot;dropdown&quot;&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;navigation-dropdown&quot;&gt;
+            &lt;a title=&quot;Fruits&quot; href=&quot;#fruits&quot;&gt;Fruits&lt;/a&gt;
+            &lt;ul id=&quot;fruits&quot;&gt;
+                &lt;li&gt;&lt;a title=&quot;Oranges&quot; href=&quot;#tab1&quot;&gt;Oranges&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title=&quot;Apples&quot; href=&quot;#tab2&quot;&gt;Apples&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title=&quot;Bananas&quot; href=&quot;#tab3&quot;&gt;Bananas&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;navigation-dropdown&quot;&gt;
+            &lt;a title=&quot;Vegetables&quot; href=&quot;#vegetables&quot;&gt;Vegetables&lt;/a&gt;
+            &lt;ul id=&quot;vegetables&quot;&gt;
+                &lt;li&gt;&lt;a title=&quot;Menu item 1&quot; href=&quot;#tab1&quot;&gt;Oranges&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title=&quot;Menu item 2&quot; href=&quot;#tab2&quot;&gt;Apples&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a title=&quot;Menu item 3&quot; href=&quot;#tab3&quot;&gt;Bananas&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a title=&quot;Menu item 3&quot; href=&quot;#tab3&quot;&gt;Lettuce&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code>
                 </pre>
             </div>
         </section>
                     </div>
 
-
-    </section>
-    <section class="box-lighten">
-        <h2>Labels with fz modifiers</h2>
-        <p>You can use the fz modifiers to change the size of the label</p>
-                                    <div data-tc-modules="tabs">
-                <section id="tab-labels-fz-1" data-tc-name="Demo">
-            <div class="box-background" >
-                                                <p>
-	<span class="label fz-xs">Neutral Label</span>
-
-	<span class="label-ok fz-default">Success Label</span>
-
-	<span class="label-ko fz-m">Error Label</span>
-
-	<span class="label-warning fz-l">Warning Label</span>
-
-	<span class="label-info fz-xl">Info Label</span>
-</p>
-                                            </div>
+</div>
         </section>
-                <section id="tab-labels-fz-2" data-tc-name="Code">
-            <div class="box-background">
-                <pre>
-	                <code data-tc-modules="code">&lt;p&gt;
-	&lt;span class=&quot;label fz-xs&quot;&gt;Neutral Label&lt;/span&gt;
+        <section id="appearance" data-tc-name="Customize Appearance">
+                     <section class="box-lighten">
+        <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in you config the following map. By defaults de values are the indicated here.</p>
+        <pre data-tc-modules="code"><code data-tc-modules="scss-group" data-tc-group="vars">/* @group vars */
 
-	&lt;span class=&quot;label-ok fz-default&quot;&gt;Success Label&lt;/span&gt;
+$object-navigation-vars-default : (
 
-	&lt;span class=&quot;label-ko fz-m&quot;&gt;Error Label&lt;/span&gt;
+	// Background  first level:
+	background-color: $color-primary,
 
-	&lt;span class=&quot;label-warning fz-l&quot;&gt;Warning Label&lt;/span&gt;
+	// Background second level:
+	background-color-dark: $color-primary-dark,
 
-	&lt;span class=&quot;label-info fz-xl&quot;&gt;Info Label&lt;/span&gt;
-&lt;/p&gt;
-</code>
-                </pre>
-            </div>
-        </section>
-                    </div>
+	// Background gradients (from background-color to background-color-light)
+	background-color-light: $color-primary-light,
 
+	// Link color
+	color: contrast-color($color-primary),
+
+	// Border Radius
+	border-radius: $default-border-radius,
+
+	// Font family first level
+	font-family: $font-face-default,
+
+	// Font weight first level
+	font-weight: normal,
+
+	// Font size first level
+	font-size: $font-size-m,
+
+	// Font family inner levels
+	inner-font-family: $font-face-default,
+
+	// Font weight inner levels
+	inner-font-weight: normal,
+
+	// Font size inner levels
+	inner-font-size: $font-size-s,
+
+	// Vertical separator for first level
+	vertical-separator: true,
+
+	// Object style (Default or tabbed)
+	style: default
+
+) !global !default;
+
+/* @endgroup vars */
+
+$object-navigation-vars-custom: () !global !default;
+
+$object-navigation-vars : map-merge($object-navigation-vars-default, $object-navigation-vars-custom) !global;</code></pre>
     </section>
 
+         </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">
