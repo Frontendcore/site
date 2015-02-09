@@ -375,7 +375,7 @@
                     <fieldset>
                         <ol>
                             <li>
-                                                                <input name="tags"  data-tc-modules="tags" data-tc-values="foo,baz,bar" placeholder="add tags separated by comma" />                                                            </li>
+                                                                <input name="tags_input" value="mola,mucho"  data-tc-modules="tags" data-tc-values="foo,baz,bar" placeholder="add tags separated by comma" required="required" />                                                            </li>
                         </ol>
                         <button type="submit" class="button">Send</button>
                     </fieldset>
@@ -385,11 +385,35 @@
                 <section id="tab-text-fields-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;input name=&quot;tags&quot;  data-tc-modules=&quot;tags&quot; data-tc-values=&quot;foo,baz,bar&quot; placeholder=&quot;add tags separated by comma&quot; /&gt;</code>
+	                <code data-tc-modules="code">&lt;input name=&quot;tags_input&quot; value=&quot;mola,mucho&quot;  data-tc-modules=&quot;tags&quot; data-tc-values=&quot;foo,baz,bar&quot; placeholder=&quot;add tags separated by comma&quot; required=&quot;required&quot; /&gt;</code>
                 </pre>
             </div>
         </section>
                     </div>
+
+                                <div data-tc-modules="tabs">
+                <section id="tab-text-selects-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                <form class="forms" method="get">
+                    <fieldset>
+                        <ol>
+                            <li>
+                                                                <input name="tags_select"  data-tc-modules="tags" data-tc-values="foo,baz,bar" data-tc-mode="restrict" placeholder="add tags separated by comma" required="required" />                                                            </li>
+                        </ol>
+                        <button type="submit" class="button">Send</button>
+                    </fieldset>
+                </form>
+                            </div>
+        </section>
+                <section id="tab-text-selects-2" data-tc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-tc-modules="code">&lt;input name=&quot;tags_select&quot;  data-tc-modules=&quot;tags&quot; data-tc-values=&quot;foo,baz,bar&quot; data-tc-mode=&quot;restrict&quot; placeholder=&quot;add tags separated by comma&quot; required=&quot;required&quot; /&gt;</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
 
             <hr />
         <h2 class="mb-m">Attributes</h2>
@@ -408,15 +432,15 @@
                 <p class="mb-s">Max number of tags allowed.</p>
                                 <p class="fz-xs c-secondary">DEFAULT: add a tag...</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-tc-text-noresult</h5></dt>
+                        <dt><h5 class="mb-n c-primary">data-tc-select</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Text used when there is no results.</p>
-                                <p class="fz-xs c-secondary">DEFAULT: No Results found</p>
+                <p class="mb-s">If it's set to true show the dropdown select to view all the values defined in data-tc-values. </p>
+                                <p class="fz-xs c-secondary">DEFAULT: free</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-tc-text-max</h5></dt>
+                        <dt><h5 class="mb-n c-primary">data-tc-mode</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Text used when no more tags are allowed</p>
-                                <p class="fz-xs c-secondary">DEFAULT: No More Selections Are Allowed</p>
+                <p class="mb-s">Defines the mode of the tags entry (Restrict or free). Restrict only allow values defined in data-tc-values and allows any value. If you set the mode to Restrict, data-tc-select default value will be false.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: free</p>
                             </dd>
                         <dt><h5 class="mb-n c-primary">placeholder</h5></dt>
             <dd class="mb-l">
@@ -435,7 +459,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.3</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.4</span></a></p>
     </div>
 </footer>
 </body>
