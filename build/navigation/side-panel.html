@@ -163,7 +163,7 @@
                                 Navigation
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="navigation"  class="hidden">
+                                                        <ul id="navigation" >
                                                             <li >
                                     <a href=".././navigation/navigation.html">Navigation </a>
                                 </li>
@@ -185,7 +185,7 @@
                                                             <li >
                                     <a href=".././navigation/tags.html">Tags </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././navigation/side-panel.html">Side Panel <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -345,14 +345,14 @@
                                 Modifiers
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="modifiers" >
+                                                        <ul id="modifiers"  class="hidden">
                                                             <li >
                                     <a href=".././modifiers/colors.html">Colors </a>
                                 </li>
                                                             <li >
                                     <a href=".././modifiers/fonts.html">Font sizes </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././modifiers/text.html">Text align & decoration </a>
                                 </li>
                                                             <li >
@@ -370,81 +370,145 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Text align & decoration modifiers</h1>
-        <div data-tc-modules="tabs">
-        <section id="tab-1" data-tc-name="Description">
-            <p class="box-background"> Description:<br />
-Provides a common system for setting text properties between HTML elements.<br />
-<br />
-Usage:<br />
-Mark the element with the desired text class.<br />
-<br />
-Complete acronym reference based on Emmet:<br />
-<br />
-FIRST TWO LETTERS<br />
-va = vertical-align<br />
-ta = text-align<br />
-td = text-decoration<br />
-<br />
-LAST LETTER<br />
-l = left<br />
-c = center<br />
-r = right<br />
-u = underline<br />
-n = none<br />
-m = middle<br />
-t = top<br />
-b = bottom<br />
-</p></section><section id="tab-2" data-tc-name="SCSS code"><div class="box-background"><pre><code data-tc-modules="code"><br />
-<br />
-@if $ui != true {<br />
-<br />
-	.va-m {<br />
-		vertical-align: middle !important;<br />
-	}<br />
-	.va-b {<br />
-		vertical-align: bottom !important;<br />
-	}<br />
-	.va-t {<br />
-		vertical-align: top !important;<br />
-	}<br />
-	.ta-l {<br />
-		text-align: left !important;<br />
-	}<br />
-<br />
-	.ta-c {<br />
-		text-align: center !important;<br />
-	}<br />
-<br />
-	.ta-r {<br />
-		text-align: right !important;<br />
-	}<br />
-<br />
-	.td-u {<br />
-		text-decoration: underline !important;<br />
-	}<br />
-<br />
-	.td-n {<br />
-		text-decoration: none !important;<br />
-	}<br />
-}</pre></code></div>
+            <h1><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Side Panel</h1>
+    <p>Inside this panel you can add the code you want, you can use it to show some info, add a menu or an image gallery for example.</p>
+    <section class="box-lighten">
+        <h2>Side Panel on the left</h2>
+                                    <div data-tc-modules="tabs">
+                <section id="tab-side-panel-1-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                                <a data-tc-modules="sidepanel" href="#side-panel-left">Toggle panel left</a>
+
+<div id="side-panel-left">
+	<div class="box-foreground">
+		<h1>Hey ya!</h1>
+		<p>Left do this!</p>
+	</div>
+</div>                                            </div>
         </section>
-        <section id="tab-0" data-tc-name="Demo">
+                <section id="tab-side-panel-1-2" data-tc-name="Code">
             <div class="box-background">
-                <p class="ta-l">Lorem ipsum</p>
-<p class="ta-c">Lorem ipsum</p>
-<p class="ta-r">Lorem ipsum</p>
-<p class="td-u">Lorem ipsum</p>            </div>
-        </section>
-        <section id="tab-3" data-tc-name="Demo Code">
-            <div class="box-background">
-                    <pre><code data-tc-modules="code">&lt;p class=&quot;ta-l&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;ta-c&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;ta-r&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;td-u&quot;&gt;Lorem ipsum&lt;/p&gt;</code></pre>
+                <pre>
+	                <code data-tc-modules="code">&lt;a data-tc-modules=&quot;sidepanel&quot; href=&quot;#side-panel-left&quot;&gt;Toggle panel left&lt;/a&gt;
+
+&lt;div id=&quot;side-panel-left&quot;&gt;
+	&lt;div class=&quot;box-foreground&quot;&gt;
+		&lt;h1&gt;Hey ya!&lt;/h1&gt;
+		&lt;p&gt;Left do this!&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
             </div>
         </section>
-    </div>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>Side panel on the right</h2>
+                                    <div data-tc-modules="tabs">
+                <section id="tab-side-panel-2-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                                <a data-tc-modules="sidepanel" data-tc-position="right" href="#side-panel-right">Toggle panel right</a>
+
+<div id="side-panel-right">
+	<div class="box-foreground">
+		<h1>Hi there!</h1>
+		<p>I'm on the right side.</p>
+	</div>
+</div>                                            </div>
+        </section>
+                <section id="tab-side-panel-2-2" data-tc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-tc-modules="code">&lt;a data-tc-modules=&quot;sidepanel&quot; data-tc-position=&quot;right&quot; href=&quot;#side-panel-right&quot;&gt;Toggle panel right&lt;/a&gt;
+
+&lt;div id=&quot;side-panel-right&quot;&gt;
+	&lt;div class=&quot;box-foreground&quot;&gt;
+		&lt;h1&gt;Hi there!&lt;/h1&gt;
+		&lt;p&gt;I&#039;m on the right side.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>Side panel tabbed</h2>
+        <p>If you include the link inside sidepanel it will be shown as a vertical tab. If you want to personalize the appearance just use the data-tc-class parameter.</p>
+                                    <div data-tc-modules="tabs">
+                <section id="tab-side-panel-tab-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                                <div id="side-panel-tab-1">
+	<a data-tc-modules="sidepanel" data-tc-position="right" data-tc-tab-top="22%" href="#side-panel-tab-1">Panel 1<i class="icon-arrow-right"></i> </a>
+	<div class="box-foreground">
+		<h1>Like a virgin!</h1>
+		<p>I'm on the right side.</p>
+	</div>
+</div>
+
+<div id="side-panel-tab-2">
+	<a data-tc-modules="sidepanel" data-tc-position="right" data-tc-tab-top="35%" href="#side-panel-tab-2">Panel 2 <i class="icon-arrow-right"></i> </a>
+	<div class="box-foreground">
+		<h1>Like a virgin!</h1>
+		<p>I'm on the right side.</p>
+	</div>
+</div>                                            </div>
+        </section>
+                <section id="tab-side-panel-tab-2" data-tc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-tc-modules="code">&lt;div id=&quot;side-panel-tab-1&quot;&gt;
+	&lt;a data-tc-modules=&quot;sidepanel&quot; data-tc-position=&quot;right&quot; data-tc-tab-top=&quot;22%&quot; href=&quot;#side-panel-tab-1&quot;&gt;Panel 1&lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;
+	&lt;div class=&quot;box-foreground&quot;&gt;
+		&lt;h1&gt;Like a virgin!&lt;/h1&gt;
+		&lt;p&gt;I&#039;m on the right side.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;side-panel-tab-2&quot;&gt;
+	&lt;a data-tc-modules=&quot;sidepanel&quot; data-tc-position=&quot;right&quot; data-tc-tab-top=&quot;35%&quot; href=&quot;#side-panel-tab-2&quot;&gt;Panel 2 &lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;
+	&lt;div class=&quot;box-foreground&quot;&gt;
+		&lt;h1&gt;Like a virgin!&lt;/h1&gt;
+		&lt;p&gt;I&#039;m on the right side.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+            <hr />
+        <h2 class="mb-m">Attributes</h2>
+        <dl class="list">
+                        <dt><h5 class="mb-n c-primary">href</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">The href of the link will be an anchor to the menu.</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-position</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Define the left or right position for the panel.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: left</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-width</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Define the width for the panel.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: 15.6em</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-class</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Add a class to the panel container</p>
+                                <p class="fz-xs c-secondary">DEFAULT: side-panel-default</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-tab-top</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Defines the top position of the tab for the side panel tabbed</p>
+                                <p class="fz-xs c-secondary">DEFAULT: 50%</p>
+                            </dd>
+                    </dl>
+
 
     </div>
 </div>
