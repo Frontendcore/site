@@ -228,10 +228,13 @@
                                     <a href=".././content/ratings.html">Ratings </a>
                                 </li>
                                                             <li >
-                                    <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
+                                    <a href=".././content/parallax.html">Parallax </a>
                                 </li>
                                                             <li >
-                                    <a href=".././content/parallax.html">Parallax </a>
+                                    <a href=".././content/charts.html">Charts <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
                                     <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
@@ -313,9 +316,6 @@
                                 </li>
                                                             <li >
                                     <a href=".././tables/dynamic-table.html">Dynamic Table <span class="fl-r cp">JS</span> </a>
-                                </li>
-                                                            <li >
-                                    <a href=".././tables/stats-tables.html">Stats Tables <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                         </ul>
                                                     </li>
@@ -429,6 +429,14 @@
 }</code></pre>
     </section>
     <section class="box-background">
+        <h2>oTools.attributeToArray</h2>
+        <p>Gets a string sepparated by comma or a string with an array format and returns an array</p>
+        <pre><code data-tc-modules="code">
+oTools.attributeToArray = function( sValue ) {
+	return sValue.replace('[','').replace(']','').split(',');
+};</code></pre>
+    </section>
+    <section class="box-background">
         <h2>Track to Google Analytics</h2>
         <p>To avoid dependencies from the api of google analytics use this wrapper to send your trackings.</p>
         <pre><code data-tc-modules="code">if ( _gaq === undefined ) var _gaq = null;
@@ -461,7 +469,7 @@ oTools.trackPage = function( sPage ) {
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.7</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.8</span></a></p>
     </div>
 </footer>
 <nav id="menu-mobile" class="navigation navigation-vertical hidden">
@@ -625,10 +633,13 @@ oTools.trackPage = function( sPage ) {
                                 <a href=".././content/ratings.html">Ratings </a>
                             </li>
                                                     <li >
-                                <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
+                                <a href=".././content/parallax.html">Parallax </a>
                             </li>
                                                     <li >
-                                <a href=".././content/parallax.html">Parallax </a>
+                                <a href=".././content/charts.html">Charts <span class="fl-r cp">JS</span> </a>
+                            </li>
+                                                    <li >
+                                <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                             </li>
                                                     <li >
                                 <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
@@ -710,9 +721,6 @@ oTools.trackPage = function( sPage ) {
                             </li>
                                                     <li >
                                 <a href=".././tables/dynamic-table.html">Dynamic Table <span class="fl-r cp">JS</span> </a>
-                            </li>
-                                                    <li >
-                                <a href=".././tables/stats-tables.html">Stats Tables <span class="fl-r cp">JS</span> </a>
                             </li>
                                             </ul>
                             </li>

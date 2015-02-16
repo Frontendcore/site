@@ -220,7 +220,7 @@
                                 Content
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="content"  class="hidden">
+                                                        <ul id="content" >
                                                             <li >
                                     <a href=".././content/boxes.html">Boxes </a>
                                 </li>
@@ -228,10 +228,13 @@
                                     <a href=".././content/ratings.html">Ratings </a>
                                 </li>
                                                             <li >
-                                    <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
+                                    <a href=".././content/parallax.html">Parallax </a>
+                                </li>
+                                                            <li  class="active">
+                                    <a href=".././content/charts.html">Charts <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
-                                    <a href=".././content/parallax.html">Parallax </a>
+                                    <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
                                     <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
@@ -307,15 +310,12 @@
                                 Tables
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="tables" >
+                                                        <ul id="tables"  class="hidden">
                                                             <li >
                                     <a href=".././tables/static-table.html">Static Table </a>
                                 </li>
                                                             <li >
                                     <a href=".././tables/dynamic-table.html">Dynamic Table <span class="fl-r cp">JS</span> </a>
-                                </li>
-                                                            <li  class="active">
-                                    <a href=".././tables/stats-tables.html">Stats Tables <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                         </ul>
                                                     </li>
@@ -369,120 +369,32 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Stats Tables</h1>
+            <h1><span class="label-js fz-xl va-m">JS</span> Charts</h1>
     <section class="box-lighten">
-        <h2>Line Stats table</h2>
+        <h2>Doughnut charts</h2>
                                     <div data-tc-modules="tabs">
-                <section id="tab-table-line-1" data-tc-name="Demo">
+                <section id="tab-chart-doughnut-1" data-tc-name="Demo">
             <div class="box-background" >
-                                                <table class="table" data-tc-modules="stats" data-tc-type="line">
-	<caption>2009 Employee Sales by Department</caption>
-	<thead>
-	<tr>
-		<td></td>
-		<th scope="col">food</th>
-		<th scope="col">auto</th>
-		<th scope="col">household</th>
-		<th scope="col">furniture</th>
-		<th scope="col">kitchen</th>
-		<th scope="col">bath</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th scope="row">Mary</th>
-		<td>190</td>
-		<td>160</td>
-		<td>40</td>
-		<td>120</td>
-		<td>30</td>
-		<td>70</td>
-	</tr>
-	<tr>
-		<th scope="row">Tom</th>
-		<td>3</td>
-		<td>40</td>
-		<td>30</td>
-		<td>45</td>
-		<td>35</td>
-		<td>49</td>
-	</tr>
-	<tr>
-		<th scope="row">Brad</th>
-		<td>10</td>
-		<td>180</td>
-		<td>10</td>
-		<td>85</td>
-		<td>25</td>
-		<td>79</td>
-	</tr>
-	<tr>
-		<th scope="row">Kate</th>
-		<td>40</td>
-		<td>80</td>
-		<td>90</td>
-		<td>25</td>
-		<td>15</td>
-		<td>119</td>
-	</tr>
-	</tbody>
-</table>                                            </div>
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="doughnut">
+		<input name="done" type="hidden" value="10" />
+		<input name="backlog" type="hidden" value="30" />
+		<input name="Work in progress" type="hidden" value="40" />
+	</canvas>
+</div>
+                                            </div>
         </section>
-                <section id="tab-table-line-2" data-tc-name="Code">
+                <section id="tab-chart-doughnut-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;table class=&quot;table&quot; data-tc-modules=&quot;stats&quot; data-tc-type=&quot;line&quot;&gt;
-	&lt;caption&gt;2009 Employee Sales by Department&lt;/caption&gt;
-	&lt;thead&gt;
-	&lt;tr&gt;
-		&lt;td&gt;&lt;/td&gt;
-		&lt;th scope=&quot;col&quot;&gt;food&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;auto&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;household&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;furniture&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;kitchen&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;bath&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Mary&lt;/th&gt;
-		&lt;td&gt;190&lt;/td&gt;
-		&lt;td&gt;160&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;120&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;70&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Tom&lt;/th&gt;
-		&lt;td&gt;3&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;45&lt;/td&gt;
-		&lt;td&gt;35&lt;/td&gt;
-		&lt;td&gt;49&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Brad&lt;/th&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;180&lt;/td&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;85&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;79&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Kate&lt;/th&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;80&lt;/td&gt;
-		&lt;td&gt;90&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;15&lt;/td&gt;
-		&lt;td&gt;119&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;doughnut&quot;&gt;
+		&lt;input name=&quot;done&quot; type=&quot;hidden&quot; value=&quot;10&quot; /&gt;
+		&lt;input name=&quot;backlog&quot; type=&quot;hidden&quot; value=&quot;30&quot; /&gt;
+		&lt;input name=&quot;Work in progress&quot; type=&quot;hidden&quot; value=&quot;40&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;
+</code>
                 </pre>
             </div>
         </section>
@@ -490,118 +402,30 @@
 
     </section>
     <section class="box-lighten">
-        <h2>Pie Stats table</h2>
+        <h2>Pie charts</h2>
                                     <div data-tc-modules="tabs">
-                <section id="tab-table-pie-1" data-tc-name="Demo">
+                <section id="tab-chart-pie-1" data-tc-name="Demo">
             <div class="box-background" >
-                                                <table class="table" data-tc-modules="stats" data-tc-type="pie">
-	<caption>2009 Employee Sales by Department</caption>
-	<thead>
-	<tr>
-		<td></td>
-		<th scope="col">food</th>
-		<th scope="col">auto</th>
-		<th scope="col">household</th>
-		<th scope="col">furniture</th>
-		<th scope="col">kitchen</th>
-		<th scope="col">bath</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th scope="row">Mary</th>
-		<td>190</td>
-		<td>160</td>
-		<td>40</td>
-		<td>120</td>
-		<td>30</td>
-		<td>70</td>
-	</tr>
-	<tr>
-		<th scope="row">Tom</th>
-		<td>3</td>
-		<td>40</td>
-		<td>30</td>
-		<td>45</td>
-		<td>35</td>
-		<td>49</td>
-	</tr>
-	<tr>
-		<th scope="row">Brad</th>
-		<td>10</td>
-		<td>180</td>
-		<td>10</td>
-		<td>85</td>
-		<td>25</td>
-		<td>79</td>
-	</tr>
-	<tr>
-		<th scope="row">Kate</th>
-		<td>40</td>
-		<td>80</td>
-		<td>90</td>
-		<td>25</td>
-		<td>15</td>
-		<td>119</td>
-	</tr>
-	</tbody>
-</table>                                            </div>
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="pie">
+		<input name="Costs" type="hidden" value="10" />
+		<input name="Indirect sales" type="hidden" value="30" />
+		<input name="Direct sales" type="hidden" value="40" />
+	</canvas>
+</div>
+                                            </div>
         </section>
-                <section id="tab-table-pie-2" data-tc-name="Code">
+                <section id="tab-chart-pie-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;table class=&quot;table&quot; data-tc-modules=&quot;stats&quot; data-tc-type=&quot;pie&quot;&gt;
-	&lt;caption&gt;2009 Employee Sales by Department&lt;/caption&gt;
-	&lt;thead&gt;
-	&lt;tr&gt;
-		&lt;td&gt;&lt;/td&gt;
-		&lt;th scope=&quot;col&quot;&gt;food&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;auto&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;household&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;furniture&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;kitchen&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;bath&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Mary&lt;/th&gt;
-		&lt;td&gt;190&lt;/td&gt;
-		&lt;td&gt;160&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;120&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;70&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Tom&lt;/th&gt;
-		&lt;td&gt;3&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;45&lt;/td&gt;
-		&lt;td&gt;35&lt;/td&gt;
-		&lt;td&gt;49&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Brad&lt;/th&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;180&lt;/td&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;85&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;79&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Kate&lt;/th&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;80&lt;/td&gt;
-		&lt;td&gt;90&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;15&lt;/td&gt;
-		&lt;td&gt;119&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;pie&quot;&gt;
+		&lt;input name=&quot;Costs&quot; type=&quot;hidden&quot; value=&quot;10&quot; /&gt;
+		&lt;input name=&quot;Indirect sales&quot; type=&quot;hidden&quot; value=&quot;30&quot; /&gt;
+		&lt;input name=&quot;Direct sales&quot; type=&quot;hidden&quot; value=&quot;40&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;
+</code>
                 </pre>
             </div>
         </section>
@@ -609,118 +433,32 @@
 
     </section>
     <section class="box-lighten">
-        <h2>Bar Stats table</h2>
+        <h2>Line charts</h2>
                                     <div data-tc-modules="tabs">
-                <section id="tab-table-bar-1" data-tc-name="Demo">
+                <section id="tab-chart-line-1" data-tc-name="Demo">
             <div class="box-background" >
-                                                <table class="table" data-tc-modules="stats" data-tc-type="bar">
-	<caption>2009 Employee Sales by Department</caption>
-	<thead>
-	<tr>
-		<td></td>
-		<th scope="col">food</th>
-		<th scope="col">auto</th>
-		<th scope="col">household</th>
-		<th scope="col">furniture</th>
-		<th scope="col">kitchen</th>
-		<th scope="col">bath</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th scope="row">Mary</th>
-		<td>190</td>
-		<td>160</td>
-		<td>40</td>
-		<td>120</td>
-		<td>30</td>
-		<td>70</td>
-	</tr>
-	<tr>
-		<th scope="row">Tom</th>
-		<td>3</td>
-		<td>40</td>
-		<td>30</td>
-		<td>45</td>
-		<td>35</td>
-		<td>49</td>
-	</tr>
-	<tr>
-		<th scope="row">Brad</th>
-		<td>10</td>
-		<td>180</td>
-		<td>10</td>
-		<td>85</td>
-		<td>25</td>
-		<td>79</td>
-	</tr>
-	<tr>
-		<th scope="row">Kate</th>
-		<td>40</td>
-		<td>80</td>
-		<td>90</td>
-		<td>25</td>
-		<td>15</td>
-		<td>119</td>
-	</tr>
-	</tbody>
-</table>                                            </div>
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="line" data-tc-labels-x="[January,February,March,June,July]">
+		<!-- The value could be an array... -->
+		<input name="results last year" type="hidden" value="[60,90,30,70,40]" />
+		<!-- ... or a string separated by comma -->
+		<input name="results this year" type="hidden" value="80,50,60,40,80" />
+	</canvas>
+</div>
+                                            </div>
         </section>
-                <section id="tab-table-bar-2" data-tc-name="Code">
+                <section id="tab-chart-line-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;table class=&quot;table&quot; data-tc-modules=&quot;stats&quot; data-tc-type=&quot;bar&quot;&gt;
-	&lt;caption&gt;2009 Employee Sales by Department&lt;/caption&gt;
-	&lt;thead&gt;
-	&lt;tr&gt;
-		&lt;td&gt;&lt;/td&gt;
-		&lt;th scope=&quot;col&quot;&gt;food&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;auto&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;household&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;furniture&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;kitchen&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;bath&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Mary&lt;/th&gt;
-		&lt;td&gt;190&lt;/td&gt;
-		&lt;td&gt;160&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;120&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;70&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Tom&lt;/th&gt;
-		&lt;td&gt;3&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;45&lt;/td&gt;
-		&lt;td&gt;35&lt;/td&gt;
-		&lt;td&gt;49&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Brad&lt;/th&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;180&lt;/td&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;85&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;79&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Kate&lt;/th&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;80&lt;/td&gt;
-		&lt;td&gt;90&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;15&lt;/td&gt;
-		&lt;td&gt;119&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;line&quot; data-tc-labels-x=&quot;[January,February,March,June,July]&quot;&gt;
+		&lt;!-- The value could be an array... --&gt;
+		&lt;input name=&quot;results last year&quot; type=&quot;hidden&quot; value=&quot;[60,90,30,70,40]&quot; /&gt;
+		&lt;!-- ... or a string separated by comma --&gt;
+		&lt;input name=&quot;results this year&quot; type=&quot;hidden&quot; value=&quot;80,50,60,40,80&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;
+</code>
                 </pre>
             </div>
         </section>
@@ -728,149 +466,92 @@
 
     </section>
     <section class="box-lighten">
-        <h2>Area Stats table</h2>
+        <h2>Bar charts</h2>
                                     <div data-tc-modules="tabs">
-                <section id="tab-table-area-1" data-tc-name="Demo">
+                <section id="tab-chart-bar-1" data-tc-name="Demo">
             <div class="box-background" >
-                                                <table class="table" data-tc-modules="stats" data-tc-type="bar">
-	<caption>2009 Employee Sales by Department</caption>
-	<thead>
-	<tr>
-		<td></td>
-		<th scope="col">food</th>
-		<th scope="col">auto</th>
-		<th scope="col">household</th>
-		<th scope="col">furniture</th>
-		<th scope="col">kitchen</th>
-		<th scope="col">bath</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th scope="row">Mary</th>
-		<td>190</td>
-		<td>160</td>
-		<td>40</td>
-		<td>120</td>
-		<td>30</td>
-		<td>70</td>
-	</tr>
-	<tr>
-		<th scope="row">Tom</th>
-		<td>3</td>
-		<td>40</td>
-		<td>30</td>
-		<td>45</td>
-		<td>35</td>
-		<td>49</td>
-	</tr>
-	<tr>
-		<th scope="row">Brad</th>
-		<td>10</td>
-		<td>180</td>
-		<td>10</td>
-		<td>85</td>
-		<td>25</td>
-		<td>79</td>
-	</tr>
-	<tr>
-		<th scope="row">Kate</th>
-		<td>40</td>
-		<td>80</td>
-		<td>90</td>
-		<td>25</td>
-		<td>15</td>
-		<td>119</td>
-	</tr>
-	</tbody>
-</table>                                            </div>
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="bar" data-tc-labels-x="January,February,March,June,July">
+		<!-- The value could be an array... -->
+		<input name="Sales last year" type="hidden" value="[60,90,30,70,40]" />
+		<!-- ... or a string separated by comma -->
+		<input name="Sales last year" type="hidden" value="80,50,60,40,80" />
+	</canvas>
+</div>
+                                            </div>
         </section>
-                <section id="tab-table-area-2" data-tc-name="Code">
+                <section id="tab-chart-bar-2" data-tc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-tc-modules="code">&lt;table class=&quot;table&quot; data-tc-modules=&quot;stats&quot; data-tc-type=&quot;bar&quot;&gt;
-	&lt;caption&gt;2009 Employee Sales by Department&lt;/caption&gt;
-	&lt;thead&gt;
-	&lt;tr&gt;
-		&lt;td&gt;&lt;/td&gt;
-		&lt;th scope=&quot;col&quot;&gt;food&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;auto&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;household&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;furniture&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;kitchen&lt;/th&gt;
-		&lt;th scope=&quot;col&quot;&gt;bath&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Mary&lt;/th&gt;
-		&lt;td&gt;190&lt;/td&gt;
-		&lt;td&gt;160&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;120&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;70&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Tom&lt;/th&gt;
-		&lt;td&gt;3&lt;/td&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;30&lt;/td&gt;
-		&lt;td&gt;45&lt;/td&gt;
-		&lt;td&gt;35&lt;/td&gt;
-		&lt;td&gt;49&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Brad&lt;/th&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;180&lt;/td&gt;
-		&lt;td&gt;10&lt;/td&gt;
-		&lt;td&gt;85&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;79&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope=&quot;row&quot;&gt;Kate&lt;/th&gt;
-		&lt;td&gt;40&lt;/td&gt;
-		&lt;td&gt;80&lt;/td&gt;
-		&lt;td&gt;90&lt;/td&gt;
-		&lt;td&gt;25&lt;/td&gt;
-		&lt;td&gt;15&lt;/td&gt;
-		&lt;td&gt;119&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;bar&quot; data-tc-labels-x=&quot;January,February,March,June,July&quot;&gt;
+		&lt;!-- The value could be an array... --&gt;
+		&lt;input name=&quot;Sales last year&quot; type=&quot;hidden&quot; value=&quot;[60,90,30,70,40]&quot; /&gt;
+		&lt;!-- ... or a string separated by comma --&gt;
+		&lt;input name=&quot;Sales last year&quot; type=&quot;hidden&quot; value=&quot;80,50,60,40,80&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;
+</code>
                 </pre>
             </div>
         </section>
                     </div>
 
     </section>
-            <hr />
+    <div class="grid">
+        <div class="col-1-2">
+            <h1>Canvas</h1>
+                    <hr />
         <h2 class="mb-m">Attributes</h2>
         <dl class="list">
                         <dt><h5 class="mb-n c-primary">data-tc-type</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Type of stats (pie, bar,area or line)</p>
+                <p class="mb-s">Type of stats (pie, bar, area or line)</p>
                                 <p class="fz-xs c-secondary">DEFAULT: line</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-tc-width</h5></dt>
+                        <dt><h5 class="mb-n c-primary">width</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Width of the stats and the table in px</p>
+                <p class="mb-s">Width in pixels of the stats and the table</p>
                                 <p class="fz-xs c-secondary">DEFAULT: autowidth based on parent element</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-tc-height</h5></dt>
+                        <dt><h5 class="mb-n c-primary">height</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Height of the stats and the table in px</p>
+                <p class="mb-s">Height in pixels of the stats and the table in px</p>
                                 <p class="fz-xs c-secondary">DEFAULT: 300</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-tc-table</h5></dt>
+                        <dt><h5 class="mb-n c-primary">data-tc-labels-x</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Defines the position of the table (up, down, modal or hide)</p>
-                                <p class="fz-xs c-secondary">DEFAULT: modal</p>
+                <p class="mb-s">Array or string separated by comma with the name of the labels for the X axis. The Pie chart and the doughnut chart does'nt have X Axis.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: []</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-colors</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Array or string separated by comma with the hex colors used for the charts.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: ['96c47f','5b90bf','b55151','b48ead','d6b051','82b2af','d4d659','dcdcdc']</p>
                             </dd>
                     </dl>
 
+        </div>
+        <div class="col-1-2">
+            <h1>Inputs</h1>
+            <p>You need to create an input hidden for each value (pie, doughnut) or group of values (line, bars)</p>
+                    <hr />
+        <h2 class="mb-m">Attributes</h2>
+        <dl class="list">
+                        <dt><h5 class="mb-n c-primary">name</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">The attribute 'name' of each input will be used as label for the legend. If one is missing the legend will not be shown.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: unlabel</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">value</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Array or string separated by comma with the values of the chart.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: autowidth based on parent element</p>
+                            </dd>
+                    </dl>
+
+        </div>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">
@@ -881,7 +562,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.7</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.4.8</span></a></p>
     </div>
 </footer>
 <nav id="menu-mobile" class="navigation navigation-vertical hidden">
@@ -1037,7 +718,7 @@
                     Content
                                             <i class="icon-angle-down fl-r"></i>
                                     </a>
-                                    <ul id="content-mobile"  class="hidden">
+                                    <ul id="content-mobile" >
                                                     <li >
                                 <a href=".././content/boxes.html">Boxes </a>
                             </li>
@@ -1045,10 +726,13 @@
                                 <a href=".././content/ratings.html">Ratings </a>
                             </li>
                                                     <li >
-                                <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
+                                <a href=".././content/parallax.html">Parallax </a>
+                            </li>
+                                                    <li  class="active">
+                                <a href=".././content/charts.html">Charts <span class="fl-r cp">JS</span> </a>
                             </li>
                                                     <li >
-                                <a href=".././content/parallax.html">Parallax </a>
+                                <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                             </li>
                                                     <li >
                                 <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
@@ -1124,15 +808,12 @@
                     Tables
                                             <i class="icon-angle-down fl-r"></i>
                                     </a>
-                                    <ul id="tables-mobile" >
+                                    <ul id="tables-mobile"  class="hidden">
                                                     <li >
                                 <a href=".././tables/static-table.html">Static Table </a>
                             </li>
                                                     <li >
                                 <a href=".././tables/dynamic-table.html">Dynamic Table <span class="fl-r cp">JS</span> </a>
-                            </li>
-                                                    <li  class="active">
-                                <a href=".././tables/stats-tables.html">Stats Tables <span class="fl-r cp">JS</span> </a>
                             </li>
                                             </ul>
                             </li>
