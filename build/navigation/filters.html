@@ -369,8 +369,10 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Filters</h1>
-                                <div data-tc-modules="tabs">
+                <h1><span class="label-css fz-xl va-m">CSS</span> Filters</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box">                                 <div data-tc-modules="tabs">
                 <section id="tab-pagination-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <ul class="filters">
@@ -392,6 +394,49 @@
         </section>
                     </div>
 
+</div>
+        </section>
+        <section id="appearance" data-tc-name="Customize Appearance">
+                     <section class="box-lighten">
+        <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <div class="box-foreground"> $object-filters-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// Background  first level: </span><br />
+		background-color: transparent,<br />
+<br />
+	<span class="c-foreground-light">// Background second level: </span><br />
+		background-color-dark: $color-primary-dark,<br />
+<br />
+	<span class="c-foreground-light">// Background gradients (from background-color to background-color-light) </span><br />
+		background-color-light: $color-primary-light,<br />
+<br />
+	<span class="c-foreground-light">// Link color </span><br />
+		color: $color-link,<br />
+<br />
+	<span class="c-foreground-light">// Link color active </span><br />
+		color-active: $color-foreground,<br />
+<br />
+	<span class="c-foreground-light">// Border Radius </span><br />
+		border-radius: $default-border-radius,<br />
+<br />
+	<span class="c-foreground-light">// Font family first level </span><br />
+		font-family: $font-face-title,<br />
+<br />
+	<span class="c-foreground-light">// Font weight first level </span><br />
+		font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font weight first level </span><br />
+		font-weight-active: bold,<br />
+<br />
+	<span class="c-foreground-light">// Font size first level </span><br />
+		font-size: $font-size-custom,<br />
+<br />
+) !global !default;</div>
+    </section>
+
+         </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">

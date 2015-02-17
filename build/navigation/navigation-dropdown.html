@@ -432,57 +432,49 @@
         <section id="appearance" data-tc-name="Customize Appearance">
                      <section class="box-lighten">
         <h2>Customize the appearance</h2>
-        <p>You can customize the appearance of this object by setting up in you config the following map. By defaults de values are the indicated here.</p>
-        <pre data-tc-modules="code"><code data-tc-modules="scss-group" data-tc-group="vars">/* @group vars */
-
-$object-navigation-vars-default : (
-
-	// Background  first level:
-	background-color: $color-primary,
-
-	// Background second level:
-	background-color-dark: $color-primary-dark,
-
-	// Background gradients (from background-color to background-color-light)
-	background-color-light: $color-primary-light,
-
-	// Link color
-	color: contrast-color($color-primary, $color-foreground, $color-background, 30%),
-
-	// Border Radius
-	border-radius: $default-border-radius,
-
-	// Font family first level
-	font-family: $font-face-default,
-
-	// Font weight first level
-	font-weight: normal,
-
-	// Font size first level
-	font-size: $font-size-m,
-
-	// Font family inner levels
-	inner-font-family: $font-face-default,
-
-	// Font weight inner levels
-	inner-font-weight: normal,
-
-	// Font size inner levels
-	inner-font-size: $font-size-s,
-
-	// Vertical separator for first level
-	vertical-separator: true,
-
-	// Object style (Default or tabbed)
-	style: default
-
-) !global !default;
-
-/* @endgroup vars */
-
-$object-navigation-vars-custom: () !global !default;
-
-$object-navigation-vars : map-merge($object-navigation-vars-default, $object-navigation-vars-custom) !global;</code></pre>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <div class="box-foreground"> $object-navigation-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// Background  first level: </span><br />
+	background-color: $color-primary,<br />
+<br />
+	<span class="c-foreground-light">// Background second level: </span><br />
+	background-color-dark: $color-primary-dark,<br />
+<br />
+	<span class="c-foreground-light">// Background gradients (from background-color to background-color-light) </span><br />
+	background-color-light: $color-primary-light,<br />
+<br />
+	<span class="c-foreground-light">// Link color </span><br />
+		color: contrast-color($color-primary, $color-foreground, $color-background),<br />
+<br />
+	<span class="c-foreground-light">// Border Radius </span><br />
+		border-radius: $default-border-radius,<br />
+<br />
+	<span class="c-foreground-light">// Font family first level </span><br />
+		font-family: $font-face-title,<br />
+<br />
+	<span class="c-foreground-light">// Font weight first level </span><br />
+		font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font size first level </span><br />
+		font-size: $font-size-m,<br />
+<br />
+	<span class="c-foreground-light">// Font family inner levels </span><br />
+		inner-font-family: $font-face-custom,<br />
+<br />
+	<span class="c-foreground-light">// Font weight inner levels </span><br />
+		inner-font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font size inner levels </span><br />
+		inner-font-size: $font-size-s,<br />
+<br />
+	<span class="c-foreground-light">// Vertical separator for first level </span><br />
+		vertical-separator: true,<br />
+<br />
+	<span class="c-foreground-light">// Object style (Default or tabbed) </span><br />
+		style: default<br />
+<br />
+) !global !default;</div>
     </section>
 
          </section>

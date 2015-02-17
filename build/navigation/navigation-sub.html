@@ -369,10 +369,11 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Subnavigation</h1>
-    <section id="navigation" class="box-lighten">
-        <h2>.navigation-sub</h2>
-                                    <div data-tc-modules="tabs">
+                <h1><span class="label-css fz-xl va-m">CSS</span> Subnavigation</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box">     <h2>.navigation-sub</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-sub-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation-sub">
@@ -398,8 +399,8 @@
         </section>
                     </div>
 
-        <h2>.navigation-sub .navigation-sub-slim</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation-sub .navigation-sub-slim</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-sub-slim-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation-sub small">
@@ -426,8 +427,8 @@
                     </div>
 
 
-        <h2>.navigation-sub with .form-search</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation-sub with .form-search</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-sub-search-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation-sub">
@@ -461,8 +462,8 @@
         </section>
                     </div>
 
-        <h2>.navigation-sub .navigation-sub-vertical</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation-sub .navigation-sub-vertical</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-sub-vertical-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation-sub navigation-vertical">
@@ -502,8 +503,8 @@
         </section>
                     </div>
 
-        <h2>.navigation and .navigation-sub</h2>
-                                    <div data-tc-modules="tabs">
+    <h2>.navigation and .navigation-sub</h2>
+                                <div data-tc-modules="tabs">
                 <section id="tab-navigation-subnavigation-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="navigation">
@@ -543,7 +544,58 @@
         </section>
                     </div>
 
+</div>
+        </section>
+        <section id="appearance" data-tc-name="Customize Appearance">
+                     <section class="box-lighten">
+        <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <div class="box-foreground"> $object-navigation-sub-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// Background  first level: </span><br />
+		background-color: $color-background,<br />
+<br />
+	<span class="c-foreground-light">// Background second level: </span><br />
+		background-color-dark: $color-box,<br />
+<br />
+	<span class="c-foreground-light">// Background gradients (from background-color to background-color-light) </span><br />
+		background-color-light: $color-primary-light,<br />
+<br />
+	<span class="c-foreground-light">// Link color </span><br />
+		color: $color-primary,<br />
+<br />
+	<span class="c-foreground-light">// Border Radius </span><br />
+		border-radius: $default-border-radius,<br />
+<br />
+	<span class="c-foreground-light">// Font family first level </span><br />
+		font-family: $font-face-custom,<br />
+<br />
+	<span class="c-foreground-light">// Font weight default </span><br />
+		font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font weight Active element </span><br />
+		font-weight-active: bold,<br />
+<br />
+	<span class="c-foreground-light">// Font size first level </span><br />
+		font-size: $font-size-m,<br />
+<br />
+	<span class="c-foreground-light">// Font family inner levels </span><br />
+		inner-font-family: $font-face-custom,<br />
+<br />
+	<span class="c-foreground-light">// Font weight inner levels </span><br />
+		inner-font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font size inner levels </span><br />
+		inner-font-size: $font-size-s,<br />
+<br />
+	<span class="c-foreground-light">// Object style (Default or tabbed) </span><br />
+		style: default<br />
+<br />
+) !global !default;</div>
     </section>
+
+         </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">

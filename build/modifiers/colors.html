@@ -391,6 +391,9 @@ secondary<br />
 box<br />
 ok<br />
 ko<br />
+foreground<br />
+background<br />
+foreground-light<br />
 <br />
 EXAMPLES<br />
 c-secondary<br />
@@ -399,7 +402,7 @@ bg-primary<br />
 bg-ok<br />
 </p></section><section id="tab-2" data-tc-name="SCSS code"><div class="box-background"><pre><code data-tc-modules="code"><br />
 <br />
-$colors-list: &#039;foreground&#039;,&#039;background&#039;,&#039;primary&#039;,&#039;secondary&#039;,&#039;box&#039;,&#039;ko&#039;,&#039;ok&#039;,&#039;info&#039;,&#039;warning&#039; ;<br />
+$colors-list: &#039;foreground&#039;,&#039;background&#039;,&#039;foreground-light&#039;,&#039;primary&#039;,&#039;secondary&#039;,&#039;box&#039;,&#039;ko&#039;,&#039;ok&#039;,&#039;info&#039;,&#039;warning&#039; ;<br />
 <br />
 @if $ui != true {<br />
 <br />
@@ -413,7 +416,9 @@ $colors-list: &#039;foreground&#039;,&#039;background&#039;,&#039;primary&#039;,
 			background-color: map-get($colors, $color) !important;<br />
 		}<br />
 	}<br />
-}</pre></code></div>
+}<br />
+<br />
+</pre></code></div>
         </section>
         <section id="tab-0" data-tc-name="Demo">
             <div class="box-background">
