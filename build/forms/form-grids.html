@@ -25,8 +25,8 @@
     <![endif]-->
     <script type="text/javascript">
         var oGlobalSettings = {
-            sPathJs : 'static/js/',
-            sPathJsCore: '.././',
+            sPathJs : '/static/js/',
+            sPathJsCore: '/static/js/',
             sPathJsModules : '.././static/js/modules/',
             sPathJsLibs : '.././static/js/libs/',
             sPathCss: '.././static/css/',
@@ -383,35 +383,35 @@
 		<ol class="grid">
 			<li class="col-1-2">
 				<label for="name">Name</label>
-				<input type="text" id="name" placeholder="Name"/>
+				<input type="text" id="name" required="required" placeholder="Name"/>
 			</li>
 			<li class="col-1-2">
 				<label for="surname">Surname</label>
-				<input type="text" id="surname" placeholder="surname"/>
+				<input type="text" id="surname" required="required" placeholder="surname"/>
 			</li>
 		</ol>
 		<ol class="grid">
 			<li class="col-1-5">
 				<label for="postalcode">Postal code</label>
-				<input type="text" id="postalcode" placeholder="Postal code"/>
+				<input type="text" id="postalcode" required="required" placeholder="Postal code"/>
 			</li>
 			<li class="col-3-5">
 				<label for="street">Street</label>
-				<input type="text" id="street" placeholder="street"/>
+				<input type="text" id="street" required="required" placeholder="street"/>
 			</li>
 			<li class="col-1-5">
 				<label for="number">Number</label>
-				<input type="text" id="number" placeholder="number"/>
+				<input type="text" id="number" required="required" placeholder="number"/>
 			</li>
 		</ol>
 		<ol>
 			<li>
 				<label for="url-field">Url</label>
-				<input type="url" id="url-field" placeholder="Example: http://www.yoursite.com" />
+				<input type="url" id="url-field" required="required" placeholder="Example: http://www.yoursite.com" />
 			</li>
 			<li>
 				<label for="email-field">Email</label>
-				<input type="email" id="email-field" placeholder="email" />
+				<input type="email" id="email-field" required="required" placeholder="email" />
 			</li>
 		</ol>
 		<ol class="grid">
@@ -465,6 +465,7 @@
 				</ul>
 			</li>
 		</ol>
+		<button type="submit" class="button">Send</button>
 	</fieldset>
 </form>                                            </div>
         </section>
@@ -477,35 +478,35 @@
 		&lt;ol class=&quot;grid&quot;&gt;
 			&lt;li class=&quot;col-1-2&quot;&gt;
 				&lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
-				&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot;/&gt;
+				&lt;input type=&quot;text&quot; id=&quot;name&quot; required=&quot;required&quot; placeholder=&quot;Name&quot;/&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;col-1-2&quot;&gt;
 				&lt;label for=&quot;surname&quot;&gt;Surname&lt;/label&gt;
-				&lt;input type=&quot;text&quot; id=&quot;surname&quot; placeholder=&quot;surname&quot;/&gt;
+				&lt;input type=&quot;text&quot; id=&quot;surname&quot; required=&quot;required&quot; placeholder=&quot;surname&quot;/&gt;
 			&lt;/li&gt;
 		&lt;/ol&gt;
 		&lt;ol class=&quot;grid&quot;&gt;
 			&lt;li class=&quot;col-1-5&quot;&gt;
 				&lt;label for=&quot;postalcode&quot;&gt;Postal code&lt;/label&gt;
-				&lt;input type=&quot;text&quot; id=&quot;postalcode&quot; placeholder=&quot;Postal code&quot;/&gt;
+				&lt;input type=&quot;text&quot; id=&quot;postalcode&quot; required=&quot;required&quot; placeholder=&quot;Postal code&quot;/&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;col-3-5&quot;&gt;
 				&lt;label for=&quot;street&quot;&gt;Street&lt;/label&gt;
-				&lt;input type=&quot;text&quot; id=&quot;street&quot; placeholder=&quot;street&quot;/&gt;
+				&lt;input type=&quot;text&quot; id=&quot;street&quot; required=&quot;required&quot; placeholder=&quot;street&quot;/&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;col-1-5&quot;&gt;
 				&lt;label for=&quot;number&quot;&gt;Number&lt;/label&gt;
-				&lt;input type=&quot;text&quot; id=&quot;number&quot; placeholder=&quot;number&quot;/&gt;
+				&lt;input type=&quot;text&quot; id=&quot;number&quot; required=&quot;required&quot; placeholder=&quot;number&quot;/&gt;
 			&lt;/li&gt;
 		&lt;/ol&gt;
 		&lt;ol&gt;
 			&lt;li&gt;
 				&lt;label for=&quot;url-field&quot;&gt;Url&lt;/label&gt;
-				&lt;input type=&quot;url&quot; id=&quot;url-field&quot; placeholder=&quot;Example: http://www.yoursite.com&quot; /&gt;
+				&lt;input type=&quot;url&quot; id=&quot;url-field&quot; required=&quot;required&quot; placeholder=&quot;Example: http://www.yoursite.com&quot; /&gt;
 			&lt;/li&gt;
 			&lt;li&gt;
 				&lt;label for=&quot;email-field&quot;&gt;Email&lt;/label&gt;
-				&lt;input type=&quot;email&quot; id=&quot;email-field&quot; placeholder=&quot;email&quot; /&gt;
+				&lt;input type=&quot;email&quot; id=&quot;email-field&quot; required=&quot;required&quot; placeholder=&quot;email&quot; /&gt;
 			&lt;/li&gt;
 		&lt;/ol&gt;
 		&lt;ol class=&quot;grid&quot;&gt;
@@ -559,12 +560,14 @@
 				&lt;/ul&gt;
 			&lt;/li&gt;
 		&lt;/ol&gt;
+		&lt;button type=&quot;submit&quot; class=&quot;button&quot;&gt;Send&lt;/button&gt;
 	&lt;/fieldset&gt;
 &lt;/form&gt;</code>
                 </pre>
             </div>
         </section>
                     </div>
+
 
     </div>
 </div>
@@ -576,6 +579,6 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.7</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.8</span></a></p>
     </div>
 </footer>
