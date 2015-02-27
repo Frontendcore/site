@@ -501,6 +501,68 @@
                     </div>
 
     </section>
+    <section class="box-lighten">
+        <h2>Doughnut charts no data</h2>
+                                    <div data-tc-modules="tabs">
+                <section id="tab-chart-doughnut-no-data-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="doughnut">
+		<input name="done" type="hidden" value="0" />
+		<input name="backlog" type="hidden" value="0" />
+		<input name="Work in progress" type="hidden" value="0" />
+	</canvas>
+</div>                                            </div>
+        </section>
+                <section id="tab-chart-doughnut-no-data-2" data-tc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;doughnut&quot;&gt;
+		&lt;input name=&quot;done&quot; type=&quot;hidden&quot; value=&quot;0&quot; /&gt;
+		&lt;input name=&quot;backlog&quot; type=&quot;hidden&quot; value=&quot;0&quot; /&gt;
+		&lt;input name=&quot;Work in progress&quot; type=&quot;hidden&quot; value=&quot;0&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>Bar charts no data</h2>
+                                    <div data-tc-modules="tabs">
+                <section id="tab-chart-bar-no-data-1" data-tc-name="Demo">
+            <div class="box-background" >
+                                                <div class="box-none pa-n">
+	<canvas height="200" data-tc-modules="charts" data-tc-type="bar" data-tc-text-no-data="Ops! No data here..." data-tc-labels-x="January,February,March,June,July">
+		<!-- The value could be an array... -->
+		<input name="Sales last year" type="hidden" value="[0,0,0,0,0]" />
+		<!-- ... or a string separated by comma -->
+		<input name="Sales last year" type="hidden" value="0,0,0,0,0" />
+	</canvas>
+</div>
+                                            </div>
+        </section>
+                <section id="tab-chart-bar-no-data-2" data-tc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-tc-modules="code">&lt;div class=&quot;box-none pa-n&quot;&gt;
+	&lt;canvas height=&quot;200&quot; data-tc-modules=&quot;charts&quot; data-tc-type=&quot;bar&quot; data-tc-text-no-data=&quot;Ops! No data here...&quot; data-tc-labels-x=&quot;January,February,March,June,July&quot;&gt;
+		&lt;!-- The value could be an array... --&gt;
+		&lt;input name=&quot;Sales last year&quot; type=&quot;hidden&quot; value=&quot;[0,0,0,0,0]&quot; /&gt;
+		&lt;!-- ... or a string separated by comma --&gt;
+		&lt;input name=&quot;Sales last year&quot; type=&quot;hidden&quot; value=&quot;0,0,0,0,0&quot; /&gt;
+	&lt;/canvas&gt;
+&lt;/div&gt;
+</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
     <div class="grid">
         <div class="col-1-2">
             <h1>Canvas</h1>
@@ -531,6 +593,11 @@
             <dd class="mb-l">
                 <p class="mb-s">Array or string separated by comma with the hex colors used for the charts.</p>
                                 <p class="fz-xs c-secondary">DEFAULT: ['96c47f','5b90bf','b55151','b48ead','d6b051','82b2af','d4d659','dcdcdc']</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-tc-text-no-data</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Text shown when all values are zero.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: No data</p>
                             </dd>
                     </dl>
 
@@ -565,6 +632,6 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.8</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.9</span></a></p>
     </div>
 </footer>
