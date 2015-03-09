@@ -1198,7 +1198,7 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@function rem-to-px($rem-value: empty) { 
-	$px-value: strip-unit( $rem-value ) * $px-to-em-proportions + &quot;px&quot;;
+	$px-value: strip-unit( $rem-value ) * $px-to-em-proportions + &#39;px&#39;;
 	@return $px-value;
  }"
     data-collapsed="@function rem-to-px($rem-value: empty) { ... }"><code>@function rem-to-px($rem-value: empty) { ... }</code></pre>
@@ -1428,25 +1428,22 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin font-size($size-value: 1.6, $line-height: true, $force-line-height: false) { 
-	@include rem-fallback( font-size, $size-value );
+	@include rem-fallback(font-size, $size-value);
 
-	@if ( $line-height == true ) {
-		@include line-height-standard( $size-value );
-	}
-	@else if ( $line-height == false ) {
+	@if ($line-height == true) {
+		@include line-height-standard($size-value);
+	} @else if ($line-height == false) {
 		// Do nothing
-	}
-	@else if ( $force-line-height == true ) {
+	} @else if ($force-line-height == true) {
 		line-height: $line-height;
-	}
-	@else {
-		@include line-height-standard( $line-height );
+	} @else {
+		@include line-height-standard($line-height);
 	}
  }"
     data-collapsed="@mixin font-size($size-value: 1.6, $line-height: true, $force-line-height: false) { ... }"><code>@mixin font-size($size-value: 1.6, $line-height: true, $force-line-height: false) { ... }</code></pre>
 
   
-    <a href="http://www.frontendcore.com/helpers/mixins/_font-size.scss#L12-L28" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/helpers/mixins/_font-size.scss#L12-L25" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1657,7 +1654,7 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin line-height-standard($font-size: $font-size-default) { 
-	@include rem-fallback( line-height, $font-size );
+	@include rem-fallback(line-height, $font-size);
  }"
     data-collapsed="@mixin line-height-standard($font-size: $font-size-default) { ... }"><code>@mixin line-height-standard($font-size: $font-size-default) { ... }</code></pre>
 
@@ -2127,7 +2124,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xxxl: map-get($fonts, size-xxxl) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L33-L33" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L37-L37" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2219,7 +2216,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xxl: map-get($fonts, size-xxl) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L38-L38" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L42-L42" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2311,7 +2308,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xl: map-get($fonts, size-xl) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L43-L43" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L47-L47" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2403,7 +2400,7 @@
   <pre class="item__code  language-scss"><code>$font-size-l: map-get($fonts, size-l) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L48-L48" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L52-L52" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2495,7 +2492,7 @@
   <pre class="item__code  language-scss"><code>$font-size-ml: map-get($fonts, size-ml) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L53-L53" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L57-L57" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2587,7 +2584,7 @@
   <pre class="item__code  language-scss"><code>$font-size-m: map-get($fonts, size-m) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L58-L58" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L62-L62" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2679,7 +2676,7 @@
   <pre class="item__code  language-scss"><code>$font-size-default: map-get($fonts, size-default) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L63-L63" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L67-L67" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2771,7 +2768,7 @@
   <pre class="item__code  language-scss"><code>$font-size-s: map-get($fonts, size-s) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L68-L68" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L72-L72" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2863,7 +2860,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xs: map-get($fonts, size-xs) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L73-L73" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L77-L77" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -2955,7 +2952,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xxs: map-get($fonts, size-xxs) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L78-L78" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L82-L82" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3047,7 +3044,7 @@
   <pre class="item__code  language-scss"><code>$font-size-xxxs: map-get($fonts, size-xxxs) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L83-L83" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L87-L87" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3136,10 +3133,10 @@
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$font-size-xxxxs: map-get($fonts, size-xxxxs)!global;</code></pre>
+  <pre class="item__code  language-scss"><code>$font-size-xxxxs: map-get($fonts, size-xxxxs) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L88-L88" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L92-L92" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3228,10 +3225,10 @@
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$font-title-exponential: map-get($fonts, size-title-exponential )!global;</code></pre>
+  <pre class="item__code  language-scss"><code>$font-title-exponential: map-get($fonts, size-title-exponential) !global;</code></pre>
 
   
-    <a href="http://www.frontendcore.com/_config/_fonts.scss#L93-L93" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/_config/_fonts.scss#L97-L97" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -3583,20 +3580,20 @@
     data-current-state="collapsed"
     data-expanded="@mixin filter-blur($radius: $default-border-radius, $hardware: false) { 
 	// Exception for IE as blur behaviour/amount is different
-	$mixin-ie-blur : strip-unit( $radius ) * 3;
+	$mixin-ie-blur: strip-unit( $radius ) * 3;
 	@if $mixin-ie-blur &gt; 99 {
 		$mixin-ie-blur: 99;
 	}
-	-webkit-filter: blur( $radius );
-	-moz-filter: blur( $radius );
-	-o-filter: blur( $radius );
-	-ms-filter: blur( $radius );
-	filter: unquote( &quot;url(\&quot;data:image/svg+xml;utf8,&lt;svg xmlns=\&#39;http://www.w3.org/2000/svg\&#39;&gt;&lt;filter id=\&#39;svg-blur\&#39;&gt;&lt;feGaussianBlur stdDeviation=\&#39;&quot; + strip-unit( $radius ) + &quot;\&#39;/&gt;&lt;/filter&gt;&lt;/svg&gt;#svg-blur\&quot;)&quot;);
-	filter: blur( $radius );
-	filter:unquote(&quot;progid:DXImageTransform.Microsoft.Blur(PixelRadius=&#39;&quot; + $mixin-ie-blur + &quot;&#39;)&quot;);
+	-webkit-filter: blur($radius);
+	-moz-filter: blur($radius);
+	-o-filter: blur($radius);
+	-ms-filter: blur($radius);
+	filter: unquote(&#39;url(\&#39;data:image/svg+xml;utf8,&lt;svg xmlns=\&#39;http://www.w3.org/2000/svg\&#39;&gt;&lt;filter id=\&#39;svg-blur\&#39;&gt;&lt;feGaussianBlur stdDeviation=\&#39;&#39; + strip-unit( $radius ) + &#39;\&#39;/&gt;&lt;/filter&gt;&lt;/svg&gt;#svg-blur\&#39;)&#39;);
+	filter: blur($radius);
+	filter: unquote(&#39;progid:DXImageTransform.Microsoft.Blur(PixelRadius=&#39;&#39; + $mixin-ie-blur + &#39;&#39;)&#39;);
 
 	@if $hardware != false {
-		@include transform( scale3d( 1, 1 ,1.001 ) );
+		@include transform(scale3d(1, 1, 1.001));
 	}
  }"
     data-collapsed="@mixin filter-blur($radius: $default-border-radius, $hardware: false) { ... }"><code>@mixin filter-blur($radius: $default-border-radius, $hardware: false) { ... }</code></pre>
@@ -3829,23 +3826,27 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: 50% 0;
-			background-attachment:fixed;
+			background-attachment: fixed;
 		}
 
 	}
 
 	@for $i from 0 to length($slides-bg-img) {
-		.#{$slide-class}-#{$i+1} { background-image: url(nth($slides-bg-img, $i+1)) }
+		.#{$slide-class}-#{$i+1} {
+			background-image: url(nth($slides-bg-img, $i+1))
+		}
 	}
 
 	@for $i from 0 to length($slides-heights) {
-		.#{$slide-class}-#{$i+1} { height:nth($slides-heights, $i+1) }
+		.#{$slide-class}-#{$i+1} {
+			height: nth($slides-heights, $i+1)
+		}
 	}
  }"
     data-collapsed="@mixin parallax-slides($slide-class: &#39;slide&#39;, $slides-height: 600px, $slides-bg-img: none) { ... }"><code>@mixin parallax-slides($slide-class: &#39;slide&#39;, $slides-height: 600px, $slides-bg-img: none) { ... }</code></pre>
 
   
-    <a href="http://www.frontendcore.com/helpers/mixins/_parallax-slides.scss#L12-L38" class="item__source-link" target="_blank">View source</a>
+    <a href="http://www.frontendcore.com/helpers/mixins/_parallax-slides.scss#L12-L40" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -4090,16 +4091,16 @@
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@mixin background-transparent($bg-color: $color-text-background, $opacity: 0.7) { 
-  background-color:rgba($bg-color, $opacity);
+	background-color: rgba($bg-color, $opacity);
 
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
-	@include has-layout;
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+		@include has-layout;
 
-	// MS filter alpha channel has a different format from standard browsers.
-	$final-bg-color-ie:ie-hex-str(rgba($bg-color, $opacity));
-	// IE9 supports rgba &amp; filters, so remember to disable the filter targeting IE9 only.
-	filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=&#39;#{$final-bg-color-ie}&#39;, endColorstr=&#39;#{$final-bg-color-ie}&#39;);
-  }
+		// MS filter alpha channel has a different format from standard browsers.
+		$final-bg-color-ie: ie-hex-str(rgba($bg-color, $opacity));
+		// IE9 supports rgba &amp; filters, so remember to disable the filter targeting IE9 only.
+		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=&#39;#{$final-bg-color-ie}&#39;, endColorstr=&#39;#{$final-bg-color-ie}&#39;);
+	}
  }"
     data-collapsed="@mixin background-transparent($bg-color: $color-text-background, $opacity: 0.7) { ... }"><code>@mixin background-transparent($bg-color: $color-text-background, $opacity: 0.7) { ... }</code></pre>
 
@@ -7977,7 +7978,7 @@ You can specify a color in your $colors map to avoid the auto color.</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$default-text-shadow-v-offset: map-get($defaults, text-shadow-v-offset ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$default-text-shadow-v-offset: map-get($defaults, text-shadow-v-offset) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_measures.scss#L71-L71" class="item__source-link" target="_blank">View source</a>
@@ -10888,7 +10889,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$object-animations: map-get($objects, animations ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$object-animations: map-get($objects, animations) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_objects.scss#L203-L203" class="item__source-link" target="_blank">View source</a>
@@ -11008,7 +11009,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$object-balloons: map-get($objects, balloons ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$object-balloons: map-get($objects, balloons) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_objects.scss#L212-L212" class="item__source-link" target="_blank">View source</a>
@@ -11626,7 +11627,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-charts: map-get($user-interface, charts ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-charts: map-get($user-interface, charts) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L39-L39" class="item__source-link" target="_blank">View source</a>
@@ -11745,7 +11746,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-autocomplete: map-get($user-interface, autocomplete ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-autocomplete: map-get($user-interface, autocomplete) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L47-L47" class="item__source-link" target="_blank">View source</a>
@@ -11864,7 +11865,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-tips: map-get($user-interface, tips ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-tips: map-get($user-interface, tips) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L55-L55" class="item__source-link" target="_blank">View source</a>
@@ -11983,7 +11984,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-carousel: map-get($user-interface, carousel ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-carousel: map-get($user-interface, carousel) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L63-L63" class="item__source-link" target="_blank">View source</a>
@@ -12102,7 +12103,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-tables: map-get($user-interface, tables ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-tables: map-get($user-interface, tables) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L71-L71" class="item__source-link" target="_blank">View source</a>
@@ -12221,7 +12222,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-notifications: map-get($user-interface, notifications ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-notifications: map-get($user-interface, notifications) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L79-L79" class="item__source-link" target="_blank">View source</a>
@@ -12340,7 +12341,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-wysiwyg: map-get($user-interface, wysiwyg ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-wysiwyg: map-get($user-interface, wysiwyg) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L87-L87" class="item__source-link" target="_blank">View source</a>
@@ -12459,7 +12460,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-sortable: map-get($user-interface, sortable ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-sortable: map-get($user-interface, sortable) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L95-L95" class="item__source-link" target="_blank">View source</a>
@@ -12578,7 +12579,7 @@ Posible values: default, false</p>
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$ui-cart: map-get($user-interface, cart ) !global;</code></pre>
+  <pre class="item__code  language-scss"><code>$ui-cart: map-get($user-interface, cart) !global;</code></pre>
 
   
     <a href="http://www.frontendcore.com/_config/_ui.scss#L103-L103" class="item__source-link" target="_blank">View source</a>
