@@ -107,6 +107,12 @@
                                                             </a>
                                                         <ul id="architecture-css"  class="hidden">
                                                             <li >
+                                    <a href=".././architecture-css/folder-structure.html">Folder structure </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././architecture-css/media-queries.html">Media Queries </a>
+                                </li>
+                                                            <li >
                                     <a href=".././architecture-css/animations.html">Animations </a>
                                 </li>
                                                             <li >
@@ -380,8 +386,10 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Pagination</h1>
-                                <div data-tc-modules="tabs">
+                <h1><span class="label-css fz-xl va-m">CSS</span> Pagination</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box">                                 <div data-tc-modules="tabs">
                 <section id="tab-pagination-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="pagination">
@@ -429,6 +437,67 @@
         </section>
                     </div>
 
+</div>
+        </section>
+        <section id="appearance" data-tc-name="Customize Appearance">
+            <div class="box">
+                             <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <pre><code data-tc-modules="code"> $object-pagination-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// Padding to the links </span><br />
+	padding: $spacing/4,<br />
+<br />
+	<span class="c-foreground-light">// Minimum width to the links </span><br />
+	min-width: false,<br />
+<br />
+	<span class="c-foreground-light">// Background color </span><br />
+	background-color: rgba($color-foreground, .1),<br />
+<br />
+	<span class="c-foreground-light">// Color </span><br />
+	color: $color-foreground,<br />
+<br />
+	<span class="c-foreground-light">// Background color for active items </span><br />
+	background-color-active: $color-background,<br />
+<br />
+	<span class="c-foreground-light">// Color for active items </span><br />
+	color-active: $color-foreground,<br />
+<br />
+	<span class="c-foreground-light">// Background color on hover items </span><br />
+	background-color-hover: $color-link,<br />
+<br />
+	<span class="c-foreground-light">// Color on hover items </span><br />
+	color-hover: contrast-color($color-link),<br />
+<br />
+	<span class="c-foreground-light">// Border width to the links </span><br />
+	border-width: 1px,<br />
+<br />
+	<span class="c-foreground-light">// Border style to the links </span><br />
+	border-style: solid,<br />
+<br />
+	<span class="c-foreground-light">// Border color to the links </span><br />
+	border-color: rgba($color-foreground, .1),<br />
+<br />
+	<span class="c-foreground-light">// Border Radius </span><br />
+	border-radius: $default-border-radius,<br />
+<br />
+	<span class="c-foreground-light">// Font family to the links </span><br />
+	font-family: $font-face-default,<br />
+<br />
+	<span class="c-foreground-light">// Font weight to the links </span><br />
+	font-weight: normal,<br />
+<br />
+	<span class="c-foreground-light">// Font weight on active items</span><br />
+	font-weight-active: bold,<br />
+<br />
+	<span class="c-foreground-light">// Font size to the links </span><br />
+	font-size: $font-size-default,<br />
+<br />
+) !global !default;</code></pre>
+
+             </div>
+        </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">
