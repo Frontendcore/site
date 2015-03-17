@@ -386,8 +386,10 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1>Tabs</h1>
-    <section id="tabs" class="box-lighten">
+                <h1>Tabs</h1>
+    <div data-tc-modules="tabs" class="tabs-box">
+        <section id="demos" data-tc-name="Demos & Code">
+            <div class="box"> 
         <h2><span class="label-css fz-xl va-m">CSS</span> Static tabs</h2>
         <p>Use this tabs for static tabs with links to new pages.</p>
                                     <div data-tc-modules="tabs">
@@ -428,10 +430,9 @@
         </section>
                     </div>
 
-    </section>
 
-    <section id="tabs-js" class="box-lighten">
-        <h2><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Dynamic tabs</h2>
+
+        <h2 class="mt-l"><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Dynamic tabs</h2>
         <p>Use this tabs to show hidden content in the DOM.</p>
                                     <div data-tc-modules="tabs">
                 <section id="tab-tabs-js-1" data-tc-name="Demo">
@@ -467,13 +468,12 @@
         </section>
                     </div>
 
-    </section>
+
 
     <h2 class="mt-l"><span class="label-css fz-xl va-m">CSS</span> Active Tab color</h2>
     <p>By default the active tab is using color to match the .box-background but you can adjust it to match most common boxes</p>
-    <section id="tabs-js" class="box-lighten">
-        <h3>Color box tab</h3>
-                                    <div data-tc-modules="tabs">
+    <h3>Color box tab</h3>
+                                <div data-tc-modules="tabs">
                 <section id="tab-tabs-box-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="tabs tabs-box">
@@ -517,8 +517,8 @@
         </section>
                     </div>
 
-        <h3>Color foreground tab</h3>
-                                    <div data-tc-modules="tabs">
+    <h3>Color foreground tab</h3>
+                                <div data-tc-modules="tabs">
                 <section id="tab-tabs-foreground-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="tabs tabs-foreground">
@@ -562,8 +562,8 @@
         </section>
                     </div>
 
-        <h3>Color primary tab</h3>
-                                    <div data-tc-modules="tabs">
+    <h3>Color primary tab</h3>
+                                <div data-tc-modules="tabs">
                 <section id="tab-tabs-primary-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="tabs tabs-primary">
@@ -607,8 +607,8 @@
         </section>
                     </div>
 
-        <h3>Color secondary tab</h3>
-                                    <div data-tc-modules="tabs">
+    <h3>Color secondary tab</h3>
+                                <div data-tc-modules="tabs">
                 <section id="tab-tabs-secondary-1" data-tc-name="Demo">
             <div class="box-background" >
                                                 <nav class="tabs tabs-secondary">
@@ -652,9 +652,51 @@
         </section>
                     </div>
 
-    </section>
 
 
+</div>
+        </section>
+        <section id="appearance" data-tc-name="Customize Appearance">
+            <div class="box">
+                             <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <pre><code data-tc-modules="code"> $object-tabs-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// Tabs container </span><br />
+	background-color: transparent,<br />
+	background-color-dark: rgba($color-foreground, .05),<br />
+	background-style: gradient, // gradient or solid<br />
+	background-gradient-percent: 80%,<br />
+	border-radius: $default-border-radius,<br />
+	font-family: $font-face-default,<br />
+	font-weight: normal,<br />
+	font-size: $font-size-default,<br />
+<br />
+	<span class="c-foreground-light">// Tab default </span><br />
+	background-color-tab: rgba($color-foreground, .05),<br />
+	color-tab: $color-foreground,<br />
+	border-color-tab: transparent,<br />
+	border-width-tab: 1px 1px 0 1px,<br />
+	border-radius-tab: $default-border-radius $default-border-radius 0 0,<br />
+<br />
+	<span class="c-foreground-light">// Tab hover </span><br />
+	background-color-hover-tab: rgba($color-link, .1),<br />
+	color-hover-tab: $color-foreground,<br />
+	border-color-hover-tab: transparent,<br />
+<br />
+	<span class="c-foreground-light">// Tab active </span><br />
+	background-color-active-tab: $color-background,<br />
+	color-active-tab: $color-foreground,<br />
+	border-color-active-tab: $color-primary rgba($color-foreground, .1) transparent rgba($color-foreground, .1),<br />
+	border-width-active-tab: 2px 1px 0 1px,<br />
+	border-width-mobile-active-tab: 2px 0 0 0,<br />
+	font-weight-active: bold,<br />
+<br />
+) !global !default;</code></pre>
+
+             </div>
+        </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">
@@ -665,7 +707,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.11</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.12</span></a></p>
     </div>
 </footer>
 <script>

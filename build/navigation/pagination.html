@@ -445,53 +445,35 @@
         <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
         <pre><code data-tc-modules="code"> $object-pagination-vars-custom: (<br />
 <br />
-	<span class="c-foreground-light">// Padding to the links </span><br />
-	padding: $spacing/4,<br />
-<br />
-	<span class="c-foreground-light">// Minimum width to the links </span><br />
-	min-width: false,<br />
-<br />
-	<span class="c-foreground-light">// Background color </span><br />
-	background-color: rgba($color-foreground, .1),<br />
-<br />
-	<span class="c-foreground-light">// Color </span><br />
-	color: $color-foreground,<br />
-<br />
-	<span class="c-foreground-light">// Background color for active items </span><br />
-	background-color-active: $color-background,<br />
-<br />
-	<span class="c-foreground-light">// Color for active items </span><br />
-	color-active: $color-foreground,<br />
-<br />
-	<span class="c-foreground-light">// Background color on hover items </span><br />
-	background-color-hover: $color-link,<br />
-<br />
-	<span class="c-foreground-light">// Color on hover items </span><br />
-	color-hover: contrast-color($color-link),<br />
-<br />
-	<span class="c-foreground-light">// Border width to the links </span><br />
-	border-width: 1px,<br />
-<br />
-	<span class="c-foreground-light">// Border style to the links </span><br />
-	border-style: solid,<br />
-<br />
-	<span class="c-foreground-light">// Border color to the links </span><br />
-	border-color: rgba($color-foreground, .1),<br />
-<br />
-	<span class="c-foreground-light">// Border Radius </span><br />
-	border-radius: $default-border-radius,<br />
-<br />
-	<span class="c-foreground-light">// Font family to the links </span><br />
+	<span class="c-foreground-light">// Page container </span><br />
 	font-family: $font-face-default,<br />
-<br />
-	<span class="c-foreground-light">// Font weight to the links </span><br />
+	font-size: $font-size-default,<br />
 	font-weight: normal,<br />
+	border-radius: $default-border-radius,<br />
+	background-color: transparent,<br />
+	color: $color-foreground,<br />
+	text-align: center,<br />
+	padding: 0,<br />
 <br />
-	<span class="c-foreground-light">// Font weight on active items</span><br />
+	<span class="c-foreground-light">// Page item </span><br />
+	padding-page: $spacing/4,<br />
+	min-width-page: $spacing,<br />
+	color-page: $color-foreground,<br />
+	background-color-page: $color-box,<br />
+	border-width-page: 1px,<br />
+	border-style-page: solid,<br />
+	border-color-page: $color-box,<br />
+	border-radius-page: $default-border-radius,<br />
+<br />
+	<span class="c-foreground-light">// Page active </span><br />
+	background-color-active: $color-background,<br />
+	color-active: $color-foreground,<br />
+	border-color-active: rgba($color-foreground, .1),<br />
 	font-weight-active: bold,<br />
 <br />
-	<span class="c-foreground-light">// Font size to the links </span><br />
-	font-size: $font-size-default,<br />
+	<span class="c-foreground-light">// Page hover </span><br />
+	background-color-hover: $color-link,<br />
+	color-hover: contrast-color($color-link),<br />
 <br />
 ) !global !default;</code></pre>
 
@@ -508,7 +490,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src=".././static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.11</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.5.12</span></a></p>
     </div>
 </footer>
 <script>
