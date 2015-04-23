@@ -44,10 +44,10 @@
     <script src="..//static/js/core.js"></script>
 </head>
 <body data-fc-modules="polyfills">
-<header class="header pb-n o-h">
+<header class="header desktop">
     <div class="grid">
         <div class="col-2-3">
-            <a data-fc-modules="side-panel" data-fc-clone="true" href="#menu" class="button mobile tablet fl-l mt-s mr-l"><i class="icon-align-justify"></i></a>
+
             <a title="Frontend Core" href="../index.html" class="logo va-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a>
         </div>
         <div class="col-1-3 desktop">
@@ -70,10 +70,19 @@
             s.parentNode.insertBefore(gcse, s);
         })();
     </script>
-
 </header>
-<div class="header-spacing"></div>
-<div class="grid ph-l">
+<header class="header-mobile mobile tablet">
+    <div class="header-mobile-container">
+        <nav class="header-mobile-buttons-left">
+            <a data-fc-modules="side-panel" data-fc-clone="true" href="#menu" class="button"><i class="icon-align-justify"></i></a>
+        </nav>
+        <a title="Frontend Core" href="../index.html" class="logo"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a>
+        <nav class="header-mobile-buttons-right">
+            <a data-fc-modules="side-panel" data-fc-position="right" data-fc-clone="true" href="#menu" class="button"><i class="icon-align-justify"></i></a>
+        </nav>
+    </div>
+</header>
+<div class="grid grid-main">
     <div class="col-1-5">
                     <nav id="menu" class="navigation navigation-vertical desktop">
                 <ul>
@@ -203,6 +212,9 @@
                                 </li>
                                                             <li >
                                     <a href=".././navigation/side-menu.html">Side Menu <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././navigation/header-mobile.html">Header Mobile </a>
                                 </li>
                                                             <li >
                                     <a href=".././navigation/steps.html">Steps </a>
@@ -449,31 +461,31 @@
                 <section id="tab-side-panel-tab-1" data-fc-name="Demo">
             <div class="box-background" >
                                                 <div id="side-panel-tab-1" class="box-foreground">
-	<a data-fc-modules="side-panel" data-fc-position="right" data-fc-tab-top="22%" data-fc-width="600" href="#side-panel-tab-1">Panel 1<i class="icon-arrow-right"></i> </a>
 	<h1>Like a virgin!</h1>
 	<p>I'm on the right side.</p>
 </div>
+<a data-fc-modules="side-panel" data-fc-position="right" data-fc-tab-top="22%" data-fc-width="600" data-fc-tab="true" href="#side-panel-tab-1" class="button button-primary">Panel 1<i class="icon-arrow-right"></i> </a>
 
 <div id="side-panel-tab-2" class="box-foreground">
-	<a data-fc-modules="side-panel" data-fc-position="right" data-fc-tab-top="35%" href="#side-panel-tab-2">Panel 2 <i class="icon-arrow-right"></i> </a>
 	<h1>Like a virgin!</h1>
 	<p>I'm on the right side.</p>
-</div>                                            </div>
+</div>
+<a data-fc-modules="side-panel" data-fc-position="right" data-fc-tab-top="35%" data-fc-tab="true" href="#side-panel-tab-2" class="button button-secondary">Panel 2 <i class="icon-arrow-right"></i> </a>                                            </div>
         </section>
                 <section id="tab-side-panel-tab-2" data-fc-name="Code">
             <div class="box-background">
                 <pre>
 	                <code data-fc-modules="code">&lt;div id=&quot;side-panel-tab-1&quot; class=&quot;box-foreground&quot;&gt;
-	&lt;a data-fc-modules=&quot;side-panel&quot; data-fc-position=&quot;right&quot; data-fc-tab-top=&quot;22%&quot; data-fc-width=&quot;600&quot; href=&quot;#side-panel-tab-1&quot;&gt;Panel 1&lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;
 	&lt;h1&gt;Like a virgin!&lt;/h1&gt;
 	&lt;p&gt;I&#039;m on the right side.&lt;/p&gt;
 &lt;/div&gt;
+&lt;a data-fc-modules=&quot;side-panel&quot; data-fc-position=&quot;right&quot; data-fc-tab-top=&quot;22%&quot; data-fc-width=&quot;600&quot; data-fc-tab=&quot;true&quot; href=&quot;#side-panel-tab-1&quot; class=&quot;button button-primary&quot;&gt;Panel 1&lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;
 
 &lt;div id=&quot;side-panel-tab-2&quot; class=&quot;box-foreground&quot;&gt;
-	&lt;a data-fc-modules=&quot;side-panel&quot; data-fc-position=&quot;right&quot; data-fc-tab-top=&quot;35%&quot; href=&quot;#side-panel-tab-2&quot;&gt;Panel 2 &lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;
 	&lt;h1&gt;Like a virgin!&lt;/h1&gt;
 	&lt;p&gt;I&#039;m on the right side.&lt;/p&gt;
-&lt;/div&gt;</code>
+&lt;/div&gt;
+&lt;a data-fc-modules=&quot;side-panel&quot; data-fc-position=&quot;right&quot; data-fc-tab-top=&quot;35%&quot; data-fc-tab=&quot;true&quot; href=&quot;#side-panel-tab-2&quot; class=&quot;button button-secondary&quot;&gt;Panel 2 &lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt; &lt;/a&gt;</code>
                 </pre>
             </div>
         </section>
@@ -497,15 +509,15 @@
                 <p class="mb-s">Define the width for the panel.</p>
                                 <p class="fz-xs c-secondary">DEFAULT: 15.6em</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-fc-class</h5></dt>
+                        <dt><h5 class="mb-n c-primary">data-fc-tab</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Add a class to the panel container</p>
-                                <p class="fz-xs c-secondary">DEFAULT: side-panel-default</p>
+                <p class="mb-s">If it's set to true will move the open link to a side tab on the side you specified in position</p>
+                                <p class="fz-xs c-secondary">DEFAULT: false</p>
                             </dd>
-                        <dt><h5 class="mb-n c-primary">data-fc-tab-top</h5></dt>
+                        <dt><h5 class="mb-n c-primary">data-fc-tab</h5></dt>
             <dd class="mb-l">
-                <p class="mb-s">Defines the top position of the tab for the side panel tabbed</p>
-                                <p class="fz-xs c-secondary">DEFAULT: 50%</p>
+                <p class="mb-s">If it's set to true will move the open link to a side tab on the side you specified in position</p>
+                                <p class="fz-xs c-secondary">DEFAULT: false</p>
                             </dd>
                         <dt><h5 class="mb-n c-primary">data-fc-clone</h5></dt>
             <dd class="mb-l">
@@ -525,7 +537,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.1</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.2</span></a></p>
     </div>
 </footer>
 <script>
