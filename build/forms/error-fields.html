@@ -398,7 +398,10 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Error Fields</h1>
+                <h1><span class="label-css fz-xl va-m">CSS</span> Error Fields</h1>
+    <div data-fc-modules="tabs" class="tabs-box">
+        <section id="demos" data-fc-name="Demos & Code">
+            <div class="box"> 
                                 <div data-fc-modules="tabs">
                 <section id="tab-error-fields-1" data-fc-name="Demo">
             <div class="box-background" >
@@ -515,6 +518,31 @@
         </section>
                     </div>
 
+</div>
+        </section>
+        <section id="appearance" data-fc-name="Customize Appearance">
+            <div class="box">
+                            <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <pre><code data-fc-modules="code"> $object-forms-vars-custom: (<br />
+	<span class="c-foreground-light">// Field </span><br />
+	field-padding: $spacing/2 $spacing/2,<br />
+	field-border-radius: 2px,<br />
+	field-border: 1px solid rgba($color-foreground, .3),<br />
+	field-box-shadow: &quot;inset 0 2px 8px rgba(#{$color-foreground}, .2), 0 1px 1px rgba(#{$color-background}, .5)&quot;,<br />
+<br />
+	<span class="c-foreground-light">// Field focus </span><br />
+	field-focus-border: rgba($color-primary, .5),<br />
+	field-focus-background: lighten($color-primary, 50),<br />
+<br />
+	<span class="c-foreground-light">// Field error </span><br />
+	field-error-border: 1px solid adjust-lightness($color-ko, 10%),<br />
+	field-error-background: adjust-lightness($color-ko, 42%)<br />
+) !global !default;</code></pre>
+
+            </div>
+        </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary">
@@ -525,7 +553,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.3</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.4</span></a></p>
     </div>
 </footer>
 <script>
