@@ -361,6 +361,9 @@
                                                             </a>
                                                         <ul id="callouts"  class="hidden">
                                                             <li >
+                                    <a href=".././callouts/loading.html">Loading <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
                                     <a href=".././callouts/messages.html">Messages </a>
                                 </li>
                                                             <li >
@@ -438,6 +441,34 @@
 }</code></pre>
     </section>
     <section class="box-background">
+        <h2>Remove Loading class from an object</h2>
+        <p>To remove the loading class once the module is initialized</p>
+        <pre><code data-fc-modules="code">FrontendTools.removeLoading = function ( oTarget, sClass, callback ) {
+
+	var oLoading = oTarget;
+
+	if (sClass === undefined) {
+		sClass = '';
+	}
+
+	if ( oTarget.parentNode.className.indexOf('loading') !== -1  ) {
+		oLoading = oTarget.parentNode;
+	}
+
+	$(oLoading).removeClass('loading');
+	$(oLoading).addClass('animated fade-in');
+
+	if (sClass !== '' & oTarget.className.indexOf(sClass) === -1 ) {
+		$(oTarget).addClass(sClass);
+	}
+
+	if (callback !== undefined) {
+		callback();
+	}
+
+}</code></pre>
+    </section>
+    <section class="box-background">
         <h2>FrontendTools.mergeJSON</h2>
         <p>Merges to JSON into one overwriting the first with the second.</p>
         <pre><code data-fc-modules="code">FrontendTools.mergeJSON = function ( oJson1, oJson2 ){
@@ -504,7 +535,7 @@ FrontendTools.trackPage = function( sPage ) {
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.6</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.7</span></a></p>
     </div>
 </footer>
 <script>

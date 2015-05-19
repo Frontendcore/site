@@ -361,6 +361,9 @@
                                                             </a>
                                                         <ul id="callouts"  class="hidden">
                                                             <li >
+                                    <a href=".././callouts/loading.html">Loading <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
                                     <a href=".././callouts/messages.html">Messages </a>
                                 </li>
                                                             <li >
@@ -406,7 +409,10 @@
     <div class="col-4-5">
             <h1 class="mr-l"><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Center box</h1>
     <p>Somtimes you need that a box centers in the middle of the screen. This can be useful for landings, login or register pages.</p>
-                                <div data-fc-modules="tabs">
+    <section class="box-lighten">
+        <h2>Center box without loading</h2>
+        <p>It's not necessary to define the width and the height but you will see the change of position in live.</p>
+                                    <div data-fc-modules="tabs" class="loading">
                 <section id="tab-centerbox-1" data-fc-name="Demo">
             <div class="box-background" style="min-height:300px">
                                                 <div class="box-primary" data-fc-modules="center-box">
@@ -428,6 +434,40 @@
         </section>
                     </div>
 
+    </section>
+
+    <section class="box-lighten">
+        <h2>Center box with loading</h2>
+        <p>It's mandatory to define the width and the height but the load process is more beauty.</p>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-centerbox-loading-1" data-fc-name="Demo">
+            <div class="box-background" style="min-height:300px">
+                                                <div class="loading">
+	<div class="box-primary" data-fc-modules="center-box" data-fc-width="400" data-fc-height="200">
+		<h1>I'm always in the middle of everything</h1>
+		<p>My position is absolute and JS helps me to be always in the middle of the page, no matter what device it is.</p>
+	</div>
+</div>
+
+                                            </div>
+        </section>
+                <section id="tab-centerbox-loading-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;div class=&quot;loading&quot;&gt;
+	&lt;div class=&quot;box-primary&quot; data-fc-modules=&quot;center-box&quot; data-fc-width=&quot;400&quot; data-fc-height=&quot;200&quot;&gt;
+		&lt;h1&gt;I&#039;m always in the middle of everything&lt;/h1&gt;
+		&lt;p&gt;My position is absolute and JS helps me to be always in the middle of the page, no matter what device it is.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
 
             <hr />
         <h2 class="mb-m">Attributes</h2>
@@ -459,7 +499,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.6</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.7</span></a></p>
     </div>
 </footer>
 <script>
