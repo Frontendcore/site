@@ -74,7 +74,7 @@
 <header class="header-mobile mobile tablet">
     <div class="header-mobile-container">
         <nav class="header-mobile-buttons-left">
-            <a data-fc-modules="side-panel" data-fc-clone="true" href="#menu" class="button"><i class="icon-align-justify"></i></a>
+            <a data-fc-modules="side-panel" data-fc-clone="false" href="#menu" class="button"><i class="icon-align-justify"></i></a>
         </nav>
         <a title="Frontend Core" href="../index.html" class="logo"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a>
         <nav class="header-mobile-buttons-right">
@@ -352,6 +352,9 @@
                                                             <li >
                                     <a href=".././tables/dynamic-table.html">Dynamic Table <span class="fl-r cp">JS</span> </a>
                                 </li>
+                                                            <li >
+                                    <a href=".././tables/responsive-table.html">Responsive Table <span class="fl-r cp">JS</span> </a>
+                                </li>
                                                         </ul>
                                                     </li>
                                             <li>
@@ -407,8 +410,10 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Static Table</h1>
-                                <div data-fc-modules="tabs" class="loading">
+                <h1><span class="label-css fz-xl va-m">CSS</span> Static Table</h1>
+    <div data-fc-modules="tabs" class="tabs-box">
+        <section id="demos" data-fc-name="Demos & Code">
+            <div class="box">                                 <div data-fc-modules="tabs" class="loading">
                 <section id="tab-statictable-1" data-fc-name="Demo">
             <div class="box-background" >
                                                 <table class="table">
@@ -496,6 +501,64 @@
         </section>
                     </div>
 
+</div>
+        </section>
+        <section id="appearance" data-fc-name="Customize Appearance">
+            <div class="box">
+                             <h2>Customize the appearance</h2>
+        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
+        <pre><code data-fc-modules="code"> $object-tables-vars-custom: (<br />
+<br />
+	<span class="c-foreground-light">// TABLE </span><br />
+		table-border-width: 0,<br />
+		table-border-color: transparent,<br />
+		table-border-style: none,<br />
+<br />
+	<span class="c-foreground-light">// THEAD TD &amp; THEAD TH </span><br />
+		thead-cell-padding: $spacing/4 $spacing/2,<br />
+		thead-cell-border-width: 0 0 1px 0,<br />
+		thead-cell-border-color: $color-box,<br />
+		thead-cell-border-style: solid,<br />
+		thead-cell-font-size: $font-size-default,<br />
+		thead-cell-font-family: $font-face-default,<br />
+		thead-cell-font-weight: normal,<br />
+		thead-cell-background: transparent,<br />
+		thead-cell-align: left,<br />
+		thead-cell-vertical-align: middle,<br />
+		thead-cell-color: $color-foreground,<br />
+	<br />
+	<span class="c-foreground-light">// TBODY </span><br />
+		tbody-ouline: 2px solid $color-background,<br />
+		tbody-border-width: 1px,<br />
+		tbody-border-color: $color-box-light,<br />
+		tbody-border-style: solid,<br />
+		tbody-color: $color-foreground,<br />
+		tbody-background: $color-background,<br />
+<br />
+	<span class="c-foreground-light">// TBODY TR </span><br />
+		tr-odd-background: rgba($color-box, .5),<br />
+		tr-hover-background: rgba($color-primary, .1),<br />
+<br />
+	<span class="c-foreground-light">// TBODY TD </span><br />
+		tbody-cell-padding: $spacing/2 $spacing/2,<br />
+		tbody-cell-border-width: 0 1px 1px 0,<br />
+		tbody-cell-border-color: $color-box,<br />
+		tbody-cell-border-style: solid,<br />
+		tbody-cell-font-size: $font-size-default,<br />
+		tbody-cell-font-family: $font-face-default,<br />
+		tbody-cell-font-weight: normal,<br />
+		tbody-cell-background: transparent,<br />
+		tbody-cell-align: left,<br />
+		tbody-cell-vertical-align: middle,<br />
+		tbody-cell-color: $color-foreground,<br />
+<br />
+) !global !default;<br />
+<br />
+</code></pre>
+
+             </div>
+        </section>
+    </div>
     </div>
 </div>
 <footer class="footer box-primary mb-n">
@@ -506,7 +569,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.7</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.8</span></a></p>
     </div>
 </footer>
 <script>
