@@ -544,6 +544,80 @@ fz-h1<br />
 		line-height: $base-line-height;<br />
 	}<br />
 <br />
+	@mixin baby-headings {<br />
+		h1, .fz-h1 {<br />
+			@include rem-fallback(font-size, $font-size-xxl*.9, true);<br />
+			@extend %title;<br />
+		}<br />
+<br />
+		h2, .fz-h2 {<br />
+			@include rem-fallback(font-size, $font-size-xl*.9, true);<br />
+			@extend %title;<br />
+		}<br />
+<br />
+		h3, .fz-h3 {<br />
+			@include rem-fallback(font-size, $font-size-l*.9, true);<br />
+			@extend %title;<br />
+		}<br />
+<br />
+		h4, .fz-h4 {<br />
+			@include rem-fallback(font-size, $font-size-ml*.9, true);<br />
+			@extend %title;<br />
+		}<br />
+<br />
+		h5, .fz-h5 {<br />
+			@include rem-fallback(font-size, $font-size-m*.9, true);<br />
+			@extend %title;<br />
+		}<br />
+<br />
+		h1, h2, h3, h4, h5, .fz-h1, .fz-h2, .fz-h3, .fz-h4 , .fz-h5 {<br />
+			&amp;.logo {<br />
+				font-family: $font-face-logo;<br />
+				font-weight: $font-weight-logo;<br />
+			}<br />
+		}<br />
+<br />
+		.fz-xxxl {<br />
+			@include rem-fallback(font-size, $font-size-xxxl, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-xxl {<br />
+			@include rem-fallback(font-size, $font-size-xxl, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-xl {<br />
+			@include rem-fallback(font-size, $font-size-xl, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-l {<br />
+			@include rem-fallback(font-size, $font-size-l, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-m {<br />
+			@include rem-fallback(font-size, $font-size-m, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-default {<br />
+			@include rem-fallback(font-size, $font-size-default, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-s {<br />
+			@include rem-fallback(font-size, $font-size-xs, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+<br />
+		.fz-xs {<br />
+			@include rem-fallback(font-size, $font-size-xxs, true);<br />
+			line-height: $base-line-height;<br />
+		}<br />
+	}<br />
+<br />
 	.fw-n {<br />
 		font-weight: normal;<br />
 	}<br />
@@ -551,7 +625,8 @@ fz-h1<br />
 	.fw-b {<br />
 		font-weight: bold;<br />
 	}<br />
-}</pre></code></div>
+}<br />
+</pre></code></div>
         </section>
         <section id="tab-0" data-fc-name="Demo">
             <div class="box-background">
@@ -584,7 +659,7 @@ fz-h1<br />
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.9</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.10</span></a></p>
     </div>
 </footer>
 <script>

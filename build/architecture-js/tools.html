@@ -479,26 +479,19 @@
         <p>Merges to JSON into one overwriting the first with the second.</p>
         <pre><code data-fc-modules="code">FrontendTools.mergeJSON = function ( oJson1, oJson2 ){
 
-	// Properties from the Souce1 object will be copied to Source2 Object.
+	// Properties from the Source1 object will be copied to Source2 Object.
 	// Note: This method will return a new merged object, Source1 and Source2 original values will not be replaced.
 
-	var oMergedJson = Object.create(oJson2); // Copying Source2 to a new Object
+	var oMergedJson = {};
 
-	for ( var attrname in oJson1) {
-		if(oMergedJson.hasOwnProperty(attrname)) {
-			if ( oJson1[attrname]!=null && oJson1[attrname].constructor==Object ) {
-				 // Recursive call if the property is an object,
-				 // Iterate the object and set all properties of the inner object.
-				oMergedJson[attrname] = mergeJSON(oJson1[attrname], oMergedJson[attrname]);
-			}
-		} else { //else copy the property from oJson1
-			oMergedJson[attrname] = oJson1[attrname];
-		}
-	}
+	for (var attrname in oJson1) { oMergedJson[attrname] = oJson1[attrname]; }
+
+	for (var attrname in oJson2) { oMergedJson[attrname] = oJson2[attrname]; }
 
 	// Returns the merged JSON
 	return oMergedJson;
-}</code></pre>
+}
+</code></pre>
     </section>
     <section class="box-background">
         <h2>FrontendTools.attributeToArray</h2>
@@ -514,8 +507,8 @@ FrontendTools.attributeToArray = function( sValue ) {
         <pre><code data-fc-modules="code">if ( _gaq === undefined ) var _gaq = null;
 
 FrontendTools.trackModule = function( sCategory, sAction, sLabel, sValue ) {
-	if ( _gaq !== null && oGlobalSettings.bTrackModules ) {
-		_gaq.push(['_trackEvent', sCategory, sAction, sLabel, sValue]);
+	if ( _gaq !== null && oGlobalSettings.bTrackModules === true ) {
+		FrontendTools.trackEvent( sCategory, sAction, sLabel, sValue );
 	}
 }
 
@@ -529,7 +522,8 @@ FrontendTools.trackPage = function( sPage ) {
 	if ( _gaq !== null ) {
 		_gaq.push(['_trackPageview', sPage]);
 	}
-}</code></pre>
+}
+</code></pre>
     </section>
     </div>
 </div>
@@ -541,7 +535,7 @@ FrontendTools.trackPage = function( sPage ) {
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.9</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.6.10</span></a></p>
     </div>
 </footer>
 <script>
