@@ -272,13 +272,19 @@
                                     <a href=".././content/carousel.html">Carousel <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
-                                    <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
-                                </li>
-                                                            <li >
                                     <a href=".././content/truncate.html">Truncate <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
+                                    <a href=".././content/toggle.html">Toggle <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
                                     <a href=".././content/sortable.html">Sortable lists <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././content/code.html">Code beautifier <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././content/cart.html">Cart <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                         </ul>
                                                     </li>
@@ -414,31 +420,61 @@
             </div>
     <div class="col-4-5">
             <h1><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Tips</h1>
-                                <div data-fc-modules="tabs" class="loading">
+    <section class="box-lighten">
+        <h2>Simple tip on hover</h2>
+                                    <div data-fc-modules="tabs" class="loading">
                 <section id="tab-text-fields-1" data-fc-name="Demo">
             <div class="box-background" >
-                                                <a href="#" data-fc-modules="tip" data-fc-content="this is the content of the tip" data-fc-title="this is the title of the tooltip" class="icon-info-circle"> Tip</a>                                            </div>
+                                                <a href="#" data-fc-modules="tip" data-fc-content="this is the content of the tip" class="icon-info-circle"> Tip</a>
+                                            </div>
         </section>
                 <section id="tab-text-fields-2" data-fc-name="Code">
             <div class="box-background">
                 <pre>
-	                <code data-fc-modules="code">&lt;a href=&quot;#&quot; data-fc-modules=&quot;tip&quot; data-fc-content=&quot;this is the content of the tip&quot; data-fc-title=&quot;this is the title of the tooltip&quot; class=&quot;icon-info-circle&quot;&gt; Tip&lt;/a&gt;</code>
+	                <code data-fc-modules="code">&lt;a href=&quot;#&quot; data-fc-modules=&quot;tip&quot; data-fc-content=&quot;this is the content of the tip&quot; class=&quot;icon-info-circle&quot;&gt; Tip&lt;/a&gt;
+</code>
                 </pre>
             </div>
         </section>
                     </div>
 
+    </section>
+    <section class="box-lighten">
+        <h2>Tip on click with close on click</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-text-fields-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <a href="#" data-fc-modules="tip" data-fc-content="this is the content of the tip" data-fc-trigger="click" class="icon-info-circle"> Tip</a>
+                                            </div>
+        </section>
+                <section id="tab-text-fields-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;a href=&quot;#&quot; data-fc-modules=&quot;tip&quot; data-fc-content=&quot;this is the content of the tip&quot; data-fc-trigger=&quot;click&quot; class=&quot;icon-info-circle&quot;&gt; Tip&lt;/a&gt;
+</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
 
             <hr />
         <h2 class="mb-m">Attributes</h2>
         <dl class="list">
-                        <dt><h5 class="mb-n c-primary">data-fc-title</h5></dt>
-            <dd class="mb-l">
-                <p class="mb-s">String with the text title of the tooltip</p>
-                            </dd>
                         <dt><h5 class="mb-n c-primary">data-fc-content</h5></dt>
             <dd class="mb-l">
                 <p class="mb-s">String with the text content of the tooltip</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-fc-position</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">String with the text title of the tooltip. Possible values: right, left, top, top-right, top-left, bottom, bottom-right, bottom-left</p>
+                                <p class="fz-xs c-secondary">DEFAULT: bottom</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-fc-trigger</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Set how tooltips should be activated and closed.</p>
+                                <p class="fz-xs c-secondary">DEFAULT: hover</p>
                             </dd>
                     </dl>
 

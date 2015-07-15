@@ -91,7 +91,7 @@
                                 Setup
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="setup" >
+                                                        <ul id="setup"  class="hidden">
                                                             <li >
                                     <a href=".././setup/getting-started.html">Getting started </a>
                                 </li>
@@ -104,7 +104,7 @@
                                                             <li >
                                     <a href=".././setup/css.html">CSS </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././setup/javascript.html">Javascript </a>
                                 </li>
                                                         </ul>
@@ -252,7 +252,7 @@
                                 Content
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="content"  class="hidden">
+                                                        <ul id="content" >
                                                             <li >
                                     <a href=".././content/boxes.html">Boxes </a>
                                 </li>
@@ -274,7 +274,7 @@
                                                             <li >
                                     <a href=".././content/truncate.html">Truncate <span class="fl-r cp">JS</span> </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././content/toggle.html">Toggle <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -419,62 +419,151 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-js fz-xl va-m">JS</span> Frontendcore Javascript setup</h1>
-    <section class="box-background">
-        <h2>1. Personalize the Global Settings</h2>
-        <p> The Global Settings are the Vars you need to personalize for each project.
-            Most of them are Paths to found files but there are also some general options. This is because core.js will access them, but it's not necessary to define them because all they have default values</p>
-        <p>These are the settings you can personalize and the default values:</p>
-        <pre><code data-fc-modules="code">&lt;script>
-var oGlobalSettings = {
-	// Defines the path of the Javascript
-	sPathJs : '/js/',
+            <h1><span class="label-js fz-xl va-m">JS</span> Toggle</h1>
+    <section class="box-lighten">
+        <h2>Toggle Slide</h2>
+        <p>Shows or hide element specified on href</p>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-slide-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <a href="#toggle-slide" data-fc-modules="toggle" class="button">Click to slide Toggle</a>
 
-	// Defines the path of the Javascript Core path (Where the core.js can be found)
-	sPathJsCore: this.sPathJs + '../../',
+<div id="toggle-slide" class="box-invert">
+    <p>Hello World!</p>
+</div>                                            </div>
+        </section>
+                <section id="tab-toggle-slide-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;a href=&quot;#toggle-slide&quot; data-fc-modules=&quot;toggle&quot; class=&quot;button&quot;&gt;Click to slide Toggle&lt;/a&gt;
 
-	// Defines the path where the Javascript Modules can be found
-	sPathJsModules : this.sPathJs + 'modules',
+&lt;div id=&quot;toggle-slide&quot; class=&quot;box-invert&quot;&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
 
-	// Defines the path where the Javascript Libs can be found
-	sPathJsLibs : this.sPathJs + '../../',
-
-	// Defines the path where the CSS files can be found
-	sPathCss: './css/',
-
-	// Defines the path where the ui.css file can be found
-	sPathCssUi: this.sPathCss + 'ui.css',
-
-	// Sends google analytics a call to get starts of calls an executions of the modules
-	bTrackModules: false,
-
-	// Defines the hash used to call all the static files ( example.js?v=).
-	// This is to avoid browser cache. The ideal is to update this number each deploy you do.
-	sHash: '1',
-
-	// Add or overwrite definitions to the RequireJS modules config.
-	// For example concatenate modals & tips to avoid too many requests and define them as one file.
-	oPaths: {},
-
-	// Set this to force always the mobile or desktop Javascript mode
-	sDevice: isMobile.any() ? 'mobile' : 'desktop',
-
-	// Activate or deactivate the responsive images module
-	bResponsiveImages: true,
-}
-&lt;/script></code></pre>
-        <p class="msg-warning">        <strong>You must declare them before the inclusion of the "core.js" file</strong> between script tags in your head.</p>
     </section>
-    <section class="box-background">
-        <h2>2. Include the Core.js</h2>
-        <p>Includes the core js with the minimum scripts, from here is all async and depending on the DOM boot.</p>
-        <pre><code data-fc-modules="code">&lt;script src="components/frontendcore-js/core.js">&lt;/script></code></pre>
+    <section class="box-lighten">
+        <h2>Toggle Class</h2>
+        <p>Toggle class name to href element</p>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-class-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <a href="#toggle-class" data-fc-modules="toggle" data-fc-class="bg-ok" class="button">Click to toggle Class</a>
+
+<div id="toggle-class" class="box-invert">
+    <p>Hello World!</p>
+</div>
+                                            </div>
+        </section>
+                <section id="tab-toggle-class-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;a href=&quot;#toggle-class&quot; data-fc-modules=&quot;toggle&quot; data-fc-class=&quot;bg-ok&quot; class=&quot;button&quot;&gt;Click to toggle Class&lt;/a&gt;
+
+&lt;div id=&quot;toggle-class&quot; class=&quot;box-invert&quot;&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
     </section>
-    <section class="box-background">
-        <h2>3. Activate the Polyfills (optional)</h2>
-        <p>If you need to give suppor for IE9 or below this is a good idea, just call the module in the body Tag.</p>
-        <pre><code data-fc-modules="code">&lt;body data-fc-modules="polyfills"></code></pre>
+    <section class="box-lighten">
+        <h2>Toggle Animation</h2>
+        <p>Toggle animation to href element based on <a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a></p>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-animation-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <!-- Bounce -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="bounce" class="button">bounce</a>
+
+<!-- flash -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="flash" class="button">flash</a>
+
+<!-- pulse -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="pulse" class="button">pulse</a>
+
+<!-- rubberband -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="rubberband" class="button">rubberband</a>
+
+<!-- shake -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="shake" class="button">shake</a>
+
+<!-- tada -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="tada" class="button">tada</a>
+
+<!-- wobble -->
+<a href="#toggle-animation-attention" data-fc-modules="toggle" data-fc-animation="wobble" class="button">wobble</a>
+
+
+<!-- Target element -->
+<div class="pa-l ta-c">
+    <p class="fz-h1" id="toggle-animation-attention">Hello World!</p>
+</div>
+
+                                            </div>
+        </section>
+                <section id="tab-toggle-animation-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;!-- Bounce --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;bounce&quot; class=&quot;button&quot;&gt;bounce&lt;/a&gt;
+
+&lt;!-- flash --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;flash&quot; class=&quot;button&quot;&gt;flash&lt;/a&gt;
+
+&lt;!-- pulse --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;pulse&quot; class=&quot;button&quot;&gt;pulse&lt;/a&gt;
+
+&lt;!-- rubberband --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;rubberband&quot; class=&quot;button&quot;&gt;rubberband&lt;/a&gt;
+
+&lt;!-- shake --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;shake&quot; class=&quot;button&quot;&gt;shake&lt;/a&gt;
+
+&lt;!-- tada --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;tada&quot; class=&quot;button&quot;&gt;tada&lt;/a&gt;
+
+&lt;!-- wobble --&gt;
+&lt;a href=&quot;#toggle-animation-attention&quot; data-fc-modules=&quot;toggle&quot; data-fc-animation=&quot;wobble&quot; class=&quot;button&quot;&gt;wobble&lt;/a&gt;
+
+
+&lt;!-- Target element --&gt;
+&lt;div class=&quot;pa-l ta-c&quot;&gt;
+    &lt;p class=&quot;fz-h1&quot; id=&quot;toggle-animation-attention&quot;&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+
+</code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
     </section>
+
+            <hr />
+        <h2 class="mb-m">Attributes</h2>
+        <dl class="list">
+                        <dt><h5 class="mb-n c-primary">href</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">The href of the link will be an anchor to the menu.</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-fc-class</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Sets the classname to toggle.</p>
+                            </dd>
+                        <dt><h5 class="mb-n c-primary">data-fc-animation</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Sets the animation type to the target element. Possible values (with -in, -out, -up, -down, -right or -left): 'flash', 'bounce', 'shake', 'tada', 'pulse', 'rubberband', 'fade', 'swing', 'tada', 'wobble', 'flip', 'rotate', 'slide', 'hinge', 'roll'</p>
+                            </dd>
+                    </dl>
+
     </div>
 </div>
 <footer class="footer box-primary mb-n">

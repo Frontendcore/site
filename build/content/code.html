@@ -91,7 +91,7 @@
                                 Setup
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="setup" >
+                                                        <ul id="setup"  class="hidden">
                                                             <li >
                                     <a href=".././setup/getting-started.html">Getting started </a>
                                 </li>
@@ -104,7 +104,7 @@
                                                             <li >
                                     <a href=".././setup/css.html">CSS </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././setup/javascript.html">Javascript </a>
                                 </li>
                                                         </ul>
@@ -252,7 +252,7 @@
                                 Content
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="content"  class="hidden">
+                                                        <ul id="content" >
                                                             <li >
                                     <a href=".././content/boxes.html">Boxes </a>
                                 </li>
@@ -280,7 +280,7 @@
                                                             <li >
                                     <a href=".././content/sortable.html">Sortable lists <span class="fl-r cp">JS</span> </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././content/code.html">Code beautifier <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -419,61 +419,518 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-js fz-xl va-m">JS</span> Frontendcore Javascript setup</h1>
-    <section class="box-background">
-        <h2>1. Personalize the Global Settings</h2>
-        <p> The Global Settings are the Vars you need to personalize for each project.
-            Most of them are Paths to found files but there are also some general options. This is because core.js will access them, but it's not necessary to define them because all they have default values</p>
-        <p>These are the settings you can personalize and the default values:</p>
-        <pre><code data-fc-modules="code">&lt;script>
-var oGlobalSettings = {
-	// Defines the path of the Javascript
-	sPathJs : '/js/',
+            <h1><span class="label-js fz-xl va-m">JS</span> Code Beautifier</h1>
+    <p>Show beauty code online for Apache, Bash, C#, C++, CSS, SCSS, CoffeeScript, Diff, HTML, XML, HTTP, Ini, JSON, Java, JavaScript, Makefile, Markdown, Nginx, Objective C, PHP, Perl, Python, Ruby and SQL.</p>
+    <section class="box-lighten">
+        <h2>html Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-html-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre>
+	<code data-fc-modules="code">&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
 
-	// Defines the path of the Javascript Core path (Where the core.js can be found)
-	sPathJsCore: this.sPathJs + '../../',
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
 
-	// Defines the path where the Javascript Modules can be found
-	sPathJsModules : this.sPathJs + 'modules',
+&lt;script type="application/javascript"&gt;
+  function $init() {return true;}
+&lt;/script&gt;
 
-	// Defines the path where the Javascript Libs can be found
-	sPathJsLibs : this.sPathJs + '../../',
+&lt;body&gt;
+  &lt;p checked class="title" id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;
+</code></pre>                                                                             </div>
+        </section>
+                <section id="tab-toggle-html-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;
+	&lt;code data-fc-modules=&quot;code&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt;
 
-	// Defines the path where the CSS files can be found
-	sPathCss: './css/',
+&amp;lt;style&amp;gt;body {width: 500px;}&amp;lt;/style&amp;gt;
 
-	// Defines the path where the ui.css file can be found
-	sPathCssUi: this.sPathCss + 'ui.css',
+&amp;lt;script type=&quot;application/javascript&quot;&amp;gt;
+  function $init() {return true;}
+&amp;lt;/script&amp;gt;
 
-	// Sends google analytics a call to get starts of calls an executions of the modules
-	bTrackModules: false,
+&amp;lt;body&amp;gt;
+  &amp;lt;p checked class=&quot;title&quot; id=&#039;title&#039;&amp;gt;Title&amp;lt;/p&amp;gt;
+  &amp;lt;!-- here goes the rest of the page --&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;                                 </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
 
-	// Defines the hash used to call all the static files ( example.js?v=).
-	// This is to avoid browser cache. The ideal is to update this number each deploy you do.
-	sHash: '1',
-
-	// Add or overwrite definitions to the RequireJS modules config.
-	// For example concatenate modals & tips to avoid too many requests and define them as one file.
-	oPaths: {},
-
-	// Set this to force always the mobile or desktop Javascript mode
-	sDevice: isMobile.any() ? 'mobile' : 'desktop',
-
-	// Activate or deactivate the responsive images module
-	bResponsiveImages: true,
+    </section>
+    <section class="box-lighten">
+        <h2>css Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-css-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body:first-of-type pre::after {
+    content: 'highlight: ' attr(class);
+  }
+  body {
+    background: linear-gradient(45deg, blue, red);
+  }
 }
-&lt;/script></code></pre>
-        <p class="msg-warning">        <strong>You must declare them before the inclusion of the "core.js" file</strong> between script tags in your head.</p>
+
+@import url('print.css');
+@page:right {
+ margin: 1cm 2cm 1.3cm 4cm;
+}
+
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+div.text,
+#content,
+li[lang=ru] {
+  font: Tahoma, Chunkfive, sans-serif;
+  background: url('hatch.png') /* wtf? */;  color: #F0F0F0 !important;
+  width: 100%;
+}
+</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-css-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body:first-of-type pre::after {
+    content: &#039;highlight: &#039; attr(class);
+  }
+  body {
+    background: linear-gradient(45deg, blue, red);
+  }
+}
+
+@import url(&#039;print.css&#039;);
+@page:right {
+ margin: 1cm 2cm 1.3cm 4cm;
+}
+
+@font-face {
+  font-family: Chunkfive; src: url(&#039;Chunkfive.otf&#039;);
+}
+
+div.text,
+#content,
+li[lang=ru] {
+  font: Tahoma, Chunkfive, sans-serif;
+  background: url(&#039;hatch.png&#039;) /* wtf? */;  color: #F0F0F0 !important;
+  width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
     </section>
-    <section class="box-background">
-        <h2>2. Include the Core.js</h2>
-        <p>Includes the core js with the minimum scripts, from here is all async and depending on the DOM boot.</p>
-        <pre><code data-fc-modules="code">&lt;script src="components/frontendcore-js/core.js">&lt;/script></code></pre>
+    <section class="box-lighten">
+        <h2>scss Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-scss-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">@import "compass/reset";
+
+// variables
+$colorGreen: #008000;
+$colorGreenDark: darken($colorGreen, 10);
+
+@mixin container {
+    max-width: 980px;
+}
+
+// mixins with parameters
+@mixin button($color:green) {
+    @if ($color == green) {
+        background-color: #008000;
+    }
+    @else if ($color == red) {
+        background-color: #B22222;
+    }
+}
+
+button {
+    @include button(red);
+}
+
+div,
+.navbar,
+#header,
+input[type="input"] {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.row-12 > [class*="spans"] {
+    border-left: 1px solid #B5C583;
+}
+
+// nested definitions
+ul {
+    width: 100%;
+    padding: {
+        left: 5px; right: 5px;
+    }
+  li {
+      float: left; margin-right: 10px;
+      .home {
+          background: url('http://placehold.it/20') scroll no-repeat 0 0;
+    }
+  }
+}
+
+.banner {
+    @extend .container;
+}
+
+a {
+  color: $colorGreen;
+  &amp;:hover { color: $colorGreenDark; }
+  &amp;:visited { color: #c458cb; }
+}
+
+@for $i from 1 through 5 {
+    .span#{$i} {
+        width: 20px*$i;
+    }
+}
+
+@mixin mobile {
+  @media screen and (max-width : 600px) {
+    @content;
+  }
+}</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-scss-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;@import &quot;compass/reset&quot;;
+
+// variables
+$colorGreen: #008000;
+$colorGreenDark: darken($colorGreen, 10);
+
+@mixin container {
+    max-width: 980px;
+}
+
+// mixins with parameters
+@mixin button($color:green) {
+    @if ($color == green) {
+        background-color: #008000;
+    }
+    @else if ($color == red) {
+        background-color: #B22222;
+    }
+}
+
+button {
+    @include button(red);
+}
+
+div,
+.navbar,
+#header,
+input[type=&quot;input&quot;] {
+    font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.row-12 &gt; [class*=&quot;spans&quot;] {
+    border-left: 1px solid #B5C583;
+}
+
+// nested definitions
+ul {
+    width: 100%;
+    padding: {
+        left: 5px; right: 5px;
+    }
+  li {
+      float: left; margin-right: 10px;
+      .home {
+          background: url(&#039;http://placehold.it/20&#039;) scroll no-repeat 0 0;
+    }
+  }
+}
+
+.banner {
+    @extend .container;
+}
+
+a {
+  color: $colorGreen;
+  &amp;amp;:hover { color: $colorGreenDark; }
+  &amp;amp;:visited { color: #c458cb; }
+}
+
+@for $i from 1 through 5 {
+    .span#{$i} {
+        width: 20px*$i;
+    }
+}
+
+@mixin mobile {
+  @media screen and (max-width : 600px) {
+    @content;
+  }
+}&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
     </section>
-    <section class="box-background">
-        <h2>3. Activate the Polyfills (optional)</h2>
-        <p>If you need to give suppor for IE9 or below this is a good idea, just call the module in the body Tag.</p>
-        <pre><code data-fc-modules="code">&lt;body data-fc-modules="polyfills"></code></pre>
+    <section class="box-lighten">
+        <h2>javascript Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-javascript-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">function $initHighlight(block, flags) {
+  try {
+    if (block.className.search(/\bno\-highlight\b/) != -1)
+      return processBlock(block.function, true, 0x0F) + ' class=""';
+  } catch (e) {
+    /* handle exception */
+    var e4x =
+        &lt;div&gt;Example
+            &lt;p&gt;1234&lt;/p&gt;&lt;/div&gt;;
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) { // "0 / 2" should not be parsed as regexp
+    if (checkCondition(classes[i]) === undefined)
+      return /\d+[\s/]/g;
+  }
+  console.log(Array.every(classes, Boolean));
+}
+</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-javascript-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;function $initHighlight(block, flags) {
+  try {
+    if (block.className.search(/\bno\-highlight\b/) != -1)
+      return processBlock(block.function, true, 0x0F) + &#039; class=&quot;&quot;&#039;;
+  } catch (e) {
+    /* handle exception */
+    var e4x =
+        &amp;lt;div&amp;gt;Example
+            &amp;lt;p&amp;gt;1234&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;;
+  }
+  for (var i = 0 / 2; i &amp;lt; classes.length; i++) { // &quot;0 / 2&quot; should not be parsed as regexp
+    if (checkCondition(classes[i]) === undefined)
+      return /\d+[\s/]/g;
+  }
+  console.log(Array.every(classes, Boolean));
+}
+&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>json Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-json-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">[
+  {
+    "title": "apples",
+    "count": [12000, 20000],
+    "description": {"text": "...", "sensitive": false}
+  },
+  {
+    "title": "oranges",
+    "count": [17500, null],
+    "description": {"text": "...", "sensitive": false}
+  }
+]
+</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-json-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;[
+  {
+    &quot;title&quot;: &quot;apples&quot;,
+    &quot;count&quot;: [12000, 20000],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  },
+  {
+    &quot;title&quot;: &quot;oranges&quot;,
+    &quot;count&quot;: [17500, null],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>php Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-php-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">require_once 'Zend/Uri/Http.php';
+
+namespace Location\Web;
+
+interface Factory
+{
+    static function _factory();
+}
+
+abstract class URI extends BaseURI implements Factory
+{
+    abstract function test();
+
+    /**
+     * Returns a URI
+     *
+     * @return URI
+     */
+    static public function _factory($stats = array(), $uri = 'http')
+    {
+        echo __METHOD__;
+        $uri = explode(':', $uri, 0b10);
+        $schemeSpecific = isset($uri[1]) ? $uri[1] : '';
+        $desc = 'Multi
+line description';
+
+        // Security check
+        if (!ctype_alnum($scheme)) {
+            throw new Zend_Uri_Exception('Illegal scheme');
+        }
+
+        return [
+            'uri'   => $uri,
+            'value' => null,
+        ];
+    }
+}
+
+__halt_compiler () ; datahere
+datahere
+datahere */
+datahere
+</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-php-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;require_once &#039;Zend/Uri/Http.php&#039;;
+
+namespace Location\Web;
+
+interface Factory
+{
+    static function _factory();
+}
+
+abstract class URI extends BaseURI implements Factory
+{
+    abstract function test();
+
+    /**
+     * Returns a URI
+     *
+     * @return URI
+     */
+    static public function _factory($stats = array(), $uri = &#039;http&#039;)
+    {
+        echo __METHOD__;
+        $uri = explode(&#039;:&#039;, $uri, 0b10);
+        $schemeSpecific = isset($uri[1]) ? $uri[1] : &#039;&#039;;
+        $desc = &#039;Multi
+line description&#039;;
+
+        // Security check
+        if (!ctype_alnum($scheme)) {
+            throw new Zend_Uri_Exception(&#039;Illegal scheme&#039;);
+        }
+
+        return [
+            &#039;uri&#039;   =&gt; $uri,
+            &#039;value&#039; =&gt; null,
+        ];
+    }
+}
+
+__halt_compiler () ; datahere
+datahere
+datahere */
+datahere
+&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
+    </section>
+    <section class="box-lighten">
+        <h2>sql Slide</h2>
+                                    <div data-fc-modules="tabs" class="loading">
+                <section id="tab-toggle-sql-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                                <pre><code data-fc-modules="code">BEGIN;
+CREATE TABLE "topic" (
+    "id" serial NOT NULL PRIMARY KEY,
+    "forum_id" integer NOT NULL,
+    "subject" varchar(255) NOT NULL
+);
+ALTER TABLE "topic" ADD CONSTRAINT forum_id FOREIGN KEY ("forum_id") REFERENCES "forum" ("id");
+
+-- Initials
+insert into "topic" ("forum_id", "subject") values (2, 'D''artagnian');
+
+select count(*) from cicero_forum;
+
+-- this line lacks ; at the end to allow people to be sloppy and omit it in one-liners
+COMMIT
+</code></pre>                                                                                               </div>
+        </section>
+                <section id="tab-toggle-sql-2" data-fc-name="Code">
+            <div class="box-background">
+                <pre>
+	                <code data-fc-modules="code">&lt;pre&gt;&lt;code data-fc-modules=&quot;code&quot;&gt;BEGIN;
+CREATE TABLE &quot;topic&quot; (
+    &quot;id&quot; serial NOT NULL PRIMARY KEY,
+    &quot;forum_id&quot; integer NOT NULL,
+    &quot;subject&quot; varchar(255) NOT NULL
+);
+ALTER TABLE &quot;topic&quot; ADD CONSTRAINT forum_id FOREIGN KEY (&quot;forum_id&quot;) REFERENCES &quot;forum&quot; (&quot;id&quot;);
+
+-- Initials
+insert into &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;) values (2, &#039;D&#039;&#039;artagnian&#039;);
+
+select count(*) from cicero_forum;
+
+-- this line lacks ; at the end to allow people to be sloppy and omit it in one-liners
+COMMIT
+&lt;/code&gt;&lt;/pre&gt;                                                   </code>
+                </pre>
+            </div>
+        </section>
+                    </div>
+
     </section>
     </div>
 </div>
