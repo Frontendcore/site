@@ -307,7 +307,7 @@
                                 Forms
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="forms"  class="hidden">
+                                                        <ul id="forms" >
                                                             <li >
                                     <a href=".././forms/form-grids.html">Form Grids </a>
                                 </li>
@@ -323,7 +323,7 @@
                                                             <li >
                                     <a href=".././forms/select-fields.html">Select Fields </a>
                                 </li>
-                                                            <li >
+                                                            <li  class="active">
                                     <a href=".././forms/select-search.html">Select with search <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -397,8 +397,8 @@
                                 Modifiers
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="modifiers" >
-                                                            <li  class="active">
+                                                        <ul id="modifiers"  class="hidden">
+                                                            <li >
                                     <a href=".././modifiers/colors.html">Colors </a>
                                 </li>
                                                             <li >
@@ -422,85 +422,88 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1><span class="label-css fz-xl va-m">CSS</span> Color modifiers</h1>
-        <div data-fc-modules="tabs">
-        <section id="tab-1" data-fc-name="Description">
-            <p class="box-background"> Description:<br />
-Provides a common system for setting colors between HTML elements.<br />
-<br />
-Usage:<br />
-Mark the element with the desired color class.<br />
-<br />
-Complete acronym reference based on Emmet:<br />
-<br />
-FIRST 2 LETTERS<br />
-c = color<br />
-bg = background<br />
-<br />
-WORDS AFTER THE DASH<br />
-The words after the dash are based on the name of the sass variables to assign colors:<br />
-primary<br />
-secondary<br />
-box<br />
-ok<br />
-ko<br />
-foreground<br />
-background<br />
-foreground-light<br />
-<br />
-EXAMPLES<br />
-c-secondary<br />
-c-box<br />
-bg-primary<br />
-bg-ok<br />
-</p></section><section id="tab-2" data-fc-name="SCSS code"><div class="box-background"><pre><code data-fc-modules="code"><br />
-<br />
-$colors-list: &#039;foreground&#039;, &#039;background&#039;, &#039;foreground-light&#039;, &#039;primary&#039;, &#039;secondary&#039;, &#039;box&#039;, &#039;ko&#039;, &#039;ok&#039;, &#039;info&#039;, &#039;warning&#039;;<br />
-<br />
-@if $ui != true {<br />
-<br />
-	@each $color in $colors-list {<br />
-<br />
-		.c-#{$color}, .c-#{$color}:before, .c-#{$color}:after {<br />
-			color: map-get($colors, $color) !important;<br />
-		}<br />
-<br />
-		.bg-#{$color}, .bg-#{$color}:before, .bg-#{$color}:after {<br />
-			background-color: map-get($colors, $color) !important;<br />
-		}<br />
-	}<br />
-}<br />
-<br />
-</pre></code></div>
+            <h1><span class="label-css fz-xl va-m">CSS</span> <span class="label-js fz-xl va-m">JS</span> Select with search</h1>
+                                <div data-fc-modules="tabs" class="loading">
+                <section id="tab-text-fields-1" data-fc-name="Demo">
+            <div class="box-background" >
+                                <form class="forms" method="get">
+                    <fieldset>
+                        <ol>
+                            <li>
+                                                                <select id="available_countries" name="available_countries" required multiple="multiple" data-fc-modules="select-search">
+	<optgroup label="Near countries">
+		<option value="DE">Alemania</option>
+		<option value="AU">Australia</option>
+		<option value="AT">Austria</option>
+		<option value="BR">Brasil</option>
+		<option value="CA">Canadá</option>
+		<option value="CN">China</option>
+		<option value="ES">España</option>
+	</optgroup>
+	<optgroup label="Far away countries">
+		<option value="US">Estados Unidos</option>
+		<option value="FR">Francia</option>
+		<option value="IN">India</option>
+		<option value="IT">Italia</option>
+		<option value="JP">Japón</option>
+		<option value="NL">Países Bajos</option>
+		<option value="PL">Polonia</option>
+		<option value="GB">Reino Unido</option>
+		<option value="RU">Rusia</option>
+		<option value="SE">Suecia</option>
+		<option value="CH">Suiza</option>
+	</optgroup>
+</select>
+                                                            </li>
+                        </ol>
+                        <button type="submit" class="button">Send</button>
+                    </fieldset>
+                </form>
+                            </div>
         </section>
-        <section id="tab-0" data-fc-name="Demo">
+                <section id="tab-text-fields-2" data-fc-name="Code">
             <div class="box-background">
-                <div class="bg-primary">&nbsp;</div>
-<div class="bg-secondary">&nbsp;</div>
-<div class="bg-box">&nbsp;</div>
-<div class="bg-ok">&nbsp;</div>
-<div class="bg-ko">&nbsp;</div>
-<p class="c-primary">Lorem ipsum</p>
-<p class="c-secondary">Lorem ipsum</p>
-<p class="c-box">Lorem ipsum</p>
-<p class="c-ok">Lorem ipsum</p>
-<p class="c-ko">Lorem ipsum</p>            </div>
-        </section>
-        <section id="tab-3" data-fc-name="Demo Code">
-            <div class="box-background">
-                    <pre><code data-fc-modules="code">&lt;div class=&quot;bg-primary&quot;&gt;&amp;nbsp;&lt;/div&gt;
-&lt;div class=&quot;bg-secondary&quot;&gt;&amp;nbsp;&lt;/div&gt;
-&lt;div class=&quot;bg-box&quot;&gt;&amp;nbsp;&lt;/div&gt;
-&lt;div class=&quot;bg-ok&quot;&gt;&amp;nbsp;&lt;/div&gt;
-&lt;div class=&quot;bg-ko&quot;&gt;&amp;nbsp;&lt;/div&gt;
-&lt;p class=&quot;c-primary&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;c-secondary&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;c-box&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;c-ok&quot;&gt;Lorem ipsum&lt;/p&gt;
-&lt;p class=&quot;c-ko&quot;&gt;Lorem ipsum&lt;/p&gt;</code></pre>
+                <pre>
+	                <code data-fc-modules="code">&lt;select id=&quot;available_countries&quot; name=&quot;available_countries&quot; required multiple=&quot;multiple&quot; data-fc-modules=&quot;select-search&quot;&gt;
+	&lt;optgroup label=&quot;Near countries&quot;&gt;
+		&lt;option value=&quot;DE&quot;&gt;Alemania&lt;/option&gt;
+		&lt;option value=&quot;AU&quot;&gt;Australia&lt;/option&gt;
+		&lt;option value=&quot;AT&quot;&gt;Austria&lt;/option&gt;
+		&lt;option value=&quot;BR&quot;&gt;Brasil&lt;/option&gt;
+		&lt;option value=&quot;CA&quot;&gt;Canadá&lt;/option&gt;
+		&lt;option value=&quot;CN&quot;&gt;China&lt;/option&gt;
+		&lt;option value=&quot;ES&quot;&gt;España&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label=&quot;Far away countries&quot;&gt;
+		&lt;option value=&quot;US&quot;&gt;Estados Unidos&lt;/option&gt;
+		&lt;option value=&quot;FR&quot;&gt;Francia&lt;/option&gt;
+		&lt;option value=&quot;IN&quot;&gt;India&lt;/option&gt;
+		&lt;option value=&quot;IT&quot;&gt;Italia&lt;/option&gt;
+		&lt;option value=&quot;JP&quot;&gt;Japón&lt;/option&gt;
+		&lt;option value=&quot;NL&quot;&gt;Países Bajos&lt;/option&gt;
+		&lt;option value=&quot;PL&quot;&gt;Polonia&lt;/option&gt;
+		&lt;option value=&quot;GB&quot;&gt;Reino Unido&lt;/option&gt;
+		&lt;option value=&quot;RU&quot;&gt;Rusia&lt;/option&gt;
+		&lt;option value=&quot;SE&quot;&gt;Suecia&lt;/option&gt;
+		&lt;option value=&quot;CH&quot;&gt;Suiza&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;
+</code>
+                </pre>
             </div>
         </section>
-    </div>
+                    </div>
+
+
+            <hr />
+        <h2 class="mb-m">Attributes</h2>
+        <dl class="list">
+                        <dt><h5 class="mb-n c-primary">data-fc-search</h5></dt>
+            <dd class="mb-l">
+                <p class="mb-s">Show or hide the search input inside the select. Posible values: true, false</p>
+                                <p class="fz-xs c-secondary">DEFAULT: true</p>
+                            </dd>
+                    </dl>
 
     </div>
 </div>

@@ -324,6 +324,9 @@
                                     <a href=".././forms/select-fields.html">Select Fields </a>
                                 </li>
                                                             <li >
+                                    <a href=".././forms/select-search.html">Select with search <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
                                     <a href=".././forms/tags-fields.html">Tags Fields <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li  class="active">
@@ -547,11 +550,16 @@
         <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
         <pre><code data-fc-modules="code"> $object-forms-vars-custom: (<br />
 	<span class="c-foreground-light">// Field </span><br />
+	field-font-family: $font-face-default,<br />
+	field-font-size: $font-size-default,<br />
+	field-font-weight: normal,<br />
+	field-background: $color-background,<br />
 	field-padding: $spacing/2 $spacing/2,<br />
+	field-margin: 0 0 $spacing,<br />
 	field-border-radius: 2px,<br />
 	field-border: 1px solid rgba($color-foreground, .3),<br />
 	field-box-shadow: &quot;inset 0 2px 8px rgba(#{$color-foreground}, .2), 0 1px 1px rgba(#{$color-background}, .5)&quot;,<br />
-<br />
+	field-placeholder-color: rgba($color-foreground, .3),<br />
 	<span class="c-foreground-light">// Field focus </span><br />
 	field-focus-border: rgba($color-primary, .5),<br />
 	field-focus-background: lighten($color-primary, 50),<br />
@@ -559,7 +567,8 @@
 	<span class="c-foreground-light">// Field error </span><br />
 	field-error-border: 1px solid adjust-lightness($color-ko, 10%),<br />
 	field-error-background: adjust-lightness($color-ko, 42%)<br />
-) !global !default;</code></pre>
+) !global !default;<br />
+</code></pre>
 
             </div>
         </section>
@@ -574,7 +583,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.3</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.4</span></a></p>
     </div>
 </footer>
 <script>

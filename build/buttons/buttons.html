@@ -324,6 +324,9 @@
                                     <a href=".././forms/select-fields.html">Select Fields </a>
                                 </li>
                                                             <li >
+                                    <a href=".././forms/select-search.html">Select with search <span class="fl-r cp">JS</span> </a>
+                                </li>
+                                                            <li >
                                     <a href=".././forms/tags-fields.html">Tags Fields <span class="fl-r cp">JS</span> </a>
                                 </li>
                                                             <li >
@@ -656,6 +659,27 @@
         <pre><code data-fc-modules="code"> $object-buttons-vars-custom: (<br />
 	<span class="c-foreground-light">// General settings </span><br />
 	text-shadow: 0 1px rgba($color-foreground, .3),<br />
+	font-size: $font-size-default,<br />
+	font-weight: bold,<br />
+	text-transform: normal,<br />
+	font-family: $font-face-title,<br />
+	padding: $spacing/3 $spacing,<br />
+	margin: 0 $spacing/4 $spacing/4 0,<br />
+	border: 0px none,<br />
+	border-radius: $default-border-radius,<br />
+	box-shadow: none,<br />
+<br />
+	<span class="c-foreground-light">// Button slim </span><br />
+	slim-font-family: $font-face-default,<br />
+	slim-font-weight: normal,<br />
+	slim-font-size: $font-size-xs,<br />
+	slim-padding: $spacing/6 $spacing/2,<br />
+<br />
+	<span class="c-foreground-light">// Button fat </span><br />
+	fat-font-family: $font-face-title,<br />
+	fat-font-weight: bold,<br />
+	fat-font-size: $font-size-xl,<br />
+	fat-padding: $spacing/4 $spacing,<br />
 <br />
 	<span class="c-foreground-light">// Default button </span><br />
 	default-background: rgba($color-foreground, .35),<br />
@@ -682,8 +706,10 @@
 	<span class="c-foreground-light">// Button empty </span><br />
 	empty-background: none,<br />
 	empty-color: $color-link,<br />
+	empty-text-shadow: none,<br />
 <br />
-) !global !default;</code></pre>
+) !global !default;<br />
+</code></pre>
 
              </div>
         </section>
@@ -698,7 +724,7 @@
     </div>
     <div class="col-2-4 ta-r">
         <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.3</span></a></p>
+        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.4</span></a></p>
     </div>
 </footer>
 <script>
