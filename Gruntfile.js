@@ -2,9 +2,6 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		clean: {
-			sassdoc: {
-				src: ['build/sassdoc']
-			},
 			site: {
 				src: ['build/']
 			}
