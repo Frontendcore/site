@@ -150,8 +150,8 @@
                                 Structure
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="structure"  class="hidden">
-                                                            <li >
+                                                        <ul id="structure" >
+                                                            <li  class="active">
                                     <a href=".././structure/grids-setup.html">Grids setup </a>
                                 </li>
                                                             <li >
@@ -190,7 +190,7 @@
                                 Navigation
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
-                                                        <ul id="navigation" >
+                                                        <ul id="navigation"  class="hidden">
                                                             <li >
                                     <a href=".././navigation/navigation.html">Navigation </a>
                                 </li>
@@ -203,7 +203,7 @@
                                                             <li >
                                     <a href=".././navigation/filters.html">Filters </a>
                                 </li>
-                                                            <li  class="active">
+                                                            <li >
                                     <a href=".././navigation/pagination.html">Pagination </a>
                                 </li>
                                                             <li >
@@ -427,100 +427,30 @@
             </nav>
             </div>
     <div class="col-4-5">
-        <div class="box-none">        <h1><span class="label-css fz-xl va-m">CSS</span> Pagination</h1>
-    <div data-fc-modules="tabs" class="tabs-box">
-        <section id="demos" data-fc-name="Demos & Code">
-            <div class="box">                                 <div data-fc-modules="tabs" class="loading">
-                <section id="tab-pagination-1" data-fc-name="Demo">
-            <div class="box-background" >
-                                                <nav class="pagination">
-	<ul>
-		<li><a title="First" href="#tab1"><i class="icon-fast-backward"></i></a></li>
-		<li><a title="Prev" href="#tab1"><i class="icon-step-backward"></i></a></li>
-		<li class="active"><a title="Page 1" href="#tab2">1</a></li>
-		<li><a title="Page 2" href="#tab3">2</a></li>
-		<li><a title="Page 3" href="#tab3">3</a></li>
-		<li><a title="Page 4" href="#tab3">4</a></li>
-		<li><a title="Page 5" href="#tab3">5</a></li>
-		<li><a title="Page 6" href="#tab3">6</a></li>
-		<li><a title="Page 7" href="#tab3">7</a></li>
-		<li><a title="Page 8" href="#tab3">8</a></li>
-		<li><a title="Page 9" href="#tab3">9</a></li>
-		<li><a title="Page 10" href="#tab3">10</a></li>
-		<li><a title="Next" href="#tab1"><i class="icon-step-forward"></i></a></li>
-		<li><a title="Last" href="#tab1"><i class="icon-fast-forward"></i></a></li>
-	</ul>
-</nav>                                            </div>
-        </section>
-                <section id="tab-pagination-2" data-fc-name="Code">
-            <div class="box-background">
-                <pre>
-	                <code data-fc-modules="code">&lt;nav class=&quot;pagination&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a title=&quot;First&quot; href=&quot;#tab1&quot;&gt;&lt;i class=&quot;icon-fast-backward&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Prev&quot; href=&quot;#tab1&quot;&gt;&lt;i class=&quot;icon-step-backward&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li class=&quot;active&quot;&gt;&lt;a title=&quot;Page 1&quot; href=&quot;#tab2&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 2&quot; href=&quot;#tab3&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 3&quot; href=&quot;#tab3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 4&quot; href=&quot;#tab3&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 5&quot; href=&quot;#tab3&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 6&quot; href=&quot;#tab3&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 7&quot; href=&quot;#tab3&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 8&quot; href=&quot;#tab3&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 9&quot; href=&quot;#tab3&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Page 10&quot; href=&quot;#tab3&quot;&gt;10&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Next&quot; href=&quot;#tab1&quot;&gt;&lt;i class=&quot;icon-step-forward&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a title=&quot;Last&quot; href=&quot;#tab1&quot;&gt;&lt;i class=&quot;icon-fast-forward&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/nav&gt;</code>
-                </pre>
-            </div>
-        </section>
-                    </div>
+        <div class="box-none">    <h1 class="mr-l"><span class="label-css fz-xl va-m">CSS</span> Grids setup</h1>
+    <div class="box-background">
+        <p class="mb-n">The grids in Frontendcore are totally configurable, you've got several columns options and you can overwrite the map $grid to personalize it:</p>
+    <pre>
+	<code data-fc-modules="code" class="hljs scss">
+        $grid: (
+        container-width: 1140px,
+        // Defines the max width of the container. Could be px or %.
 
-</div>
-        </section>
-        <section id="appearance" data-fc-name="Customize Appearance">
-            <div class="box">
-                             <h2>Customize the appearance</h2>
-        <p>You can customize the appearance of this object by setting up in your config folder the following map. By default de values are the indicated here.</p>
-        <pre><code data-fc-modules="code"> $object-pagination-vars-custom: (<br />
-<br />
-	<span class="c-foreground-light">// Page container </span><br />
-	font-family: $font-face-default,<br />
-	font-size: $font-size-default,<br />
-	font-weight: normal,<br />
-	border-radius: $default-border-radius,<br />
-	background-color: transparent,<br />
-	color: $color-foreground,<br />
-	text-align: center,<br />
-	padding: 0,<br />
-<br />
-	<span class="c-foreground-light">// Page item </span><br />
-	padding-page: $spacing/4,<br />
-	min-width-page: $spacing,<br />
-	color-page: $color-foreground,<br />
-	background-color-page: $color-box,<br />
-	border-width-page: 1px,<br />
-	border-style-page: solid,<br />
-	border-color-page: $color-box,<br />
-	border-radius-page: $default-border-radius,<br />
-<br />
-	<span class="c-foreground-light">// Page active </span><br />
-	background-color-active: $color-background,<br />
-	color-active: $color-foreground,<br />
-	border-color-active: rgba($color-foreground, .1),<br />
-	font-weight-active: bold,<br />
-<br />
-	<span class="c-foreground-light">// Page hover </span><br />
-	background-color-hover: $color-link,<br />
-	color-hover: contrast-color($color-link),<br />
-<br />
-) !global !default;<br />
-</code></pre>
+        gutters: .50,
+        // Defines the width of the space between columns. Should be relative.
 
-             </div>
-        </section>
+        flow: ltr,
+        // Defines how to flow left to right (ltr) or Right to left (rtl)
+
+        container-position: center
+        // Defines the position of the container (left,center or right)
+
+        ) !global;
+    </code>
+</pre>
+        <p>By default the grid is set to 98% and modifies the with and position of the columns depending on the resolution of the device. Reduce and maximize this page to see it in action.</p>
+        <p>The <strong class="c-primary">.grid-main</strong> class should be only added in the main grid of your page (usually called #container"). This class will add some paddings depending on the device you are.</p>
+        <p>If you want to create fixed layouts (very useful for admin panels) add the <strong class="c-primary">.grid-fixed</strong> class to your main grid container.</p>
     </div>
 </div>
     </div>

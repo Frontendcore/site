@@ -47,8 +47,7 @@
 <header class="header desktop">
     <div class="grid">
         <div class="col-2-3">
-
-            <a title="Frontend Core" href="../index.html" class="logo va-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a>
+            <a title="Frontend Core" href="../index.html" class="logo va-m"><img src="..//static/img/logo-frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a>
         </div>
         <div class="col-1-3 desktop">
             <gcse:search></gcse:search>
@@ -76,7 +75,7 @@
         <nav class="header-mobile-buttons-left">
             <a data-fc-modules="side-panel" data-fc-clone="false" href="#menu" class="button"><i class="icon-align-justify"></i></a>
         </nav>
-        <a title="Frontend Core" href="../index.html" class="logo"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a>
+        <a title="Frontend Core" href="../index.html" class="logo mb-m"><img src="..//static/img/logo-frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a>
         <nav class="header-mobile-buttons-right">
 
         </nav>
@@ -152,8 +151,14 @@
                                                                     <i class="icon-angle-down fl-r"></i>
                                                             </a>
                                                         <ul id="structure" >
+                                                            <li >
+                                    <a href=".././structure/grids-setup.html">Grids setup </a>
+                                </li>
                                                             <li  class="active">
-                                    <a href=".././structure/grids.html">Grids </a>
+                                    <a href=".././structure/grids-autoresponsive.html">Autoresponsive grids </a>
+                                </li>
+                                                            <li >
+                                    <a href=".././structure/grids-customresponsive.html">Custom responsive grids </a>
                                 </li>
                                                             <li >
                                     <a href=".././structure/center-box.html">Center box <span class="fl-r cp">JS</span> </a>
@@ -422,31 +427,8 @@
             </nav>
             </div>
     <div class="col-4-5">
-            <h1 class="mr-l"><span class="label-css fz-xl va-m">CSS</span> Grids</h1>
-    <div class="box-background">
-    <p class="mb-n">The grids in Frontendcore are totally configurable, you've got several columns options and you can overwrite the map $grid to personalize it:</p>
-    <pre>
-	<code data-fc-modules="code" class="hljs scss">
-    $grid: (
-        container-width: 1140px,
-        // Defines the max width of the container. Could be px or %.
-
-        gutters: .50,
-        // Defines the width of the space between columns. Should be relative.
-
-        flow: ltr,
-        // Defines how to flow left to right (ltr) or Right to left (rtl)
-
-        container-position: center
-        // Defines the position of the container (left,center or right)
-
-    ) !global;
-    </code>
-</pre>
-    <p>By default the grid is set to 98% and modifies the with and position of the columns depending on the resolution of the device. Reduce and maximize this page to see it in action.</p>
-    <p>The <strong class="c-primary">.grid-main</strong> class should be only added in the main grid of your page (usually called #container"). This class will add some paddings depending on the device you are.</p>
-    <p>If you want to create fixed layouts (very useful for admin panels) add the <strong class="c-primary">.grid-fixed</strong> class to your main grid container.</p>
-    </div>
+        <div class="box-none">    <h1 class="mr-l"><span class="label-css fz-xl va-m">CSS</span> Autoresponsive Grids</h1>
+    <p class="mb-n">This grids works automatically with all resolutions. Resize the window to check the behaviour.</p>
     <h2 class="mt-l">1 Column</h2>
                                 <div data-fc-modules="tabs" class="loading">
                 <section id="tab-1-column-1" data-fc-name="Demo">
@@ -1693,17 +1675,22 @@
         </section>
                     </div>
 
+</div>
     </div>
 </div>
 <footer class="footer box-primary mb-n">
-    <div class="col-2-4">
-        <h3 class="fw-n">About us</h3>
-        <p>FrontendCore comes form the experience of <a href="https://twitter.com/tonipinel" target="_blank" class="td-u fw-b">Toni Pinel</a>. He was working as Principal Frontend Engineer at <a href="https://www.softonic.com" target="_blank" class="td-u">www.Softonic.com</a> & <a href="https://www.obolog.com" target="_blank" class="td-u">www.obolog.com</a>. Is based in the knowledge and the needs to create high quality code and be the more agile possible.</p>
-        <p>Be free to contribute to the project, any ideas or developments should be welcome!</p>
-    </div>
-    <div class="col-2-4 ta-r">
-        <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/frontendcore-small.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-        <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.4</span></a></p>
+    <div class="grid">
+        <div class="col-2-4">
+            <div class="box-primary mb-n">
+                <h3 class="fw-n">About us</h3>
+                <p>FrontendCore comes form the experience of <a href="https://twitter.com/tonipinel" target="_blank" class="td-u fw-b">Toni Pinel</a>. He was working as Principal Frontend Engineer at <a href="https://www.softonic.com" target="_blank" class="td-u">www.Softonic.com</a> & <a href="https://www.obolog.com" target="_blank" class="td-u">www.obolog.com</a>. Is based in the knowledge and the needs to create high quality code and be the more agile possible.</p>
+                <p>Be free to contribute to the project, any ideas or developments should be welcome!</p>
+            </div>
+        </div>
+        <div class="col-2-4">
+            <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/logo-frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
+            <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.5</span></a></p>
+        </div>
     </div>
 </footer>
 <script>
