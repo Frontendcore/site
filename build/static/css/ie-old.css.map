@@ -134,8 +134,10 @@
 		"../../../../workspace/css/core/_config/_ui.scss",
 		"../../../../workspace/css/core/_config/_objects.scss",
 		"../../../../workspace/css/core/_config/_icons.scss",
+		"../../../../workspace/css/core/_config/_breakpoints.scss",
 		"../../../../workspace/css/core/helpers/__index.scss",
 		"../../../../workspace/css/core/helpers/mixins/__index.scss",
+		"../../../../workspace/css/core/helpers/mixins/_media-query.scss",
 		"../../../../workspace/css/core/helpers/mixins/_backgrounds.scss",
 		"../../../../workspace/css/core/helpers/mixins/_rem-fallback.scss",
 		"../../../../workspace/css/core/helpers/mixins/_font-size.scss",
@@ -146,6 +148,6 @@
 		"../../../../workspace/css/core/helpers/placeholders/_colors.scss",
 		"../../../../workspace/css/core/helpers/placeholders/_header-footer.scss"
 	],
-	"mappings": "ACUA,OAAO,CAAE,OAAO,AAAC,CAChB,OAAO,CAAE,eAAgB,CACzB,AAED,QAAQ,AAAC,CACR,OAAO,CAAE,gBAAiB,CAC1B,AAED,WAAW,CAAE,oBAAoB,CAAE,uBAAuB,CAAE,cAAc,AAAC,CAC1E,OAAO,CAAE,KAAM,CACf,CAED,AAAA,KAAC,EAAO,MAAM,AAAb,CAAe,CACf,OAAO,CAAE,KAAM,CACf",
+	"mappings": "ACUA,OAAO,EAAE,OAAO,CAAC;EAChB,OAAO,EAAE,eAAgB;CACzB;;AAED,QAAQ,CAAC;EACR,OAAO,EAAE,gBAAiB;CAC1B;;AAED,WAAW,EAAE,oBAAoB,EAAE,uBAAuB,EAAE,cAAc,CAAC;EAC1E,OAAO,EAAE,KAAM;CACf;;CAED,AAAA,KAAC,EAAO,MAAM,AAAb,EAAe;EACf,OAAO,EAAE,KAAM;CACf",
 	"names": []
 }
