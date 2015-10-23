@@ -8399,6 +8399,11 @@ header.tab:last-of-type {
   display: none !important;
 }
 
+body {
+  opacity: 1;
+  display: block;
+}
+
 .header {
   background-image: url("/static/img/bg-landing.jpg");
   background-repeat: no-repeat;
