@@ -7599,6 +7599,7 @@ dl[class*='list-'] dd, dl.list dd {
   background: transparent;
   font-family: "Source Sans Pro", Helvetica, Helvetica, Arial, sans-serif;
   font-size: 1rem ;
+  width: 100%;
 }
 
 .pagination.right {
