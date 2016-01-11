@@ -186,7 +186,7 @@ $objects: (
 }
 
 .icon-border {
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   border: solid 0.08em #424242;
   border-radius: .1em;
 }
@@ -6492,13 +6492,13 @@ input[type='submit'] {
   cursor: default;
 }
 
-[class^='form'] input[type='text']:focus, [class^='form'] select:focus, [class^='form'] textarea:focus, [class^='form'] .select-multiple-checkbox-list .checkbox-list:focus, .form-search:focus, div.gsc-input-box:focus, [class^='form'] .select-multiple-checkbox-list .checkbox-list li:hover, [class^='form'] .select-multiple-checkbox-list .checkbox-list .selected, [class^='form'] .radio-list-complex li:hover, [class^='form'] .radio-list-complex li.selected, [class^='form'] .checkbox-list-complex li:hover, [class^='form'] .checkbox-list-complex li.selected {
+[class^='form'] input[type='text']:focus, [class^='form'] input[type='search']:focus, [class^='form'] input[type='url']:focus, [class^='form'] input[type='password']:focus, [class^='form'] input[type='email']:focus, [class^='form'] input[type='number']:focus, [class^='form'] input[type='tel']:focus, [class^='form'] input[type='date']:focus, [class^='form'] input[type='datetime-local']:focus, [class^='form'] input[type='month']:focus, [class^='form'] select:focus, [class^='form'] textarea:focus, [class^='form'] .select-multiple-checkbox-list .checkbox-list:focus, .form-search:focus, div.gsc-input-box:focus, [class^='form'] .select-multiple-checkbox-list .checkbox-list li:hover, [class^='form'] .select-multiple-checkbox-list .checkbox-list .selected, [class^='form'] .radio-list-complex li:hover, [class^='form'] .radio-list-complex li.selected, [class^='form'] .checkbox-list-complex li:hover, [class^='form'] .checkbox-list-complex li.selected {
   border-color: rgba(64, 124, 142, 0.5);
   background: #ddebf0;
   outline: none;
 }
 
-[class^='form'] input[type='text'], [class^='form'] select, [class^='form'] textarea, [class^='form'] .select-multiple-checkbox-list .checkbox-list, .form-search, div.gsc-input-box {
+[class^='form'] input[type='text'], [class^='form'] input[type='search'], [class^='form'] input[type='url'], [class^='form'] input[type='password'], [class^='form'] input[type='email'], [class^='form'] input[type='number'], [class^='form'] input[type='tel'], [class^='form'] input[type='date'], [class^='form'] input[type='datetime-local'], [class^='form'] input[type='month'], [class^='form'] select, [class^='form'] textarea, [class^='form'] .select-multiple-checkbox-list .checkbox-list, .form-search, div.gsc-input-box {
   display: block;
   font-family: "Source Sans Pro", Helvetica, Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -6520,12 +6520,12 @@ input[type='submit'] {
   box-shadow: "inset 0 2px 8px rgba(#424242, .2), 0 1px 1px rgba(#fdfdfd, .5)";
 }
 
-[class^='form'] input.error[type='text'], [class^='form'] select.error, [class^='form'] textarea.error, [class^='form'] .select-multiple-checkbox-list .error.checkbox-list, .error.form-search, div.error.gsc-input-box {
+[class^='form'] input.error[type='text'], [class^='form'] input.error[type='search'], [class^='form'] input.error[type='url'], [class^='form'] input.error[type='password'], [class^='form'] input.error[type='email'], [class^='form'] input.error[type='number'], [class^='form'] input.error[type='tel'], [class^='form'] input.error[type='date'], [class^='form'] input.error[type='datetime-local'], [class^='form'] input.error[type='month'], [class^='form'] select.error, [class^='form'] textarea.error, [class^='form'] .select-multiple-checkbox-list .error.checkbox-list, .error.form-search, div.error.gsc-input-box {
   background: adjust-lightness(#b32d20, 42%);
   border: 1px solid 1px solid adjust-lightness(#b32d20, 10%);
 }
 
-[class^='form'] .error-fields input[type='text'], [class^='form'] .error-fields select, [class^='form'] .error-fields textarea {
+[class^='form'] .error-fields input[type='text'], [class^='form'] .error-fields input[type='search'], [class^='form'] .error-fields input[type='url'], [class^='form'] .error-fields input[type='password'], [class^='form'] .error-fields input[type='email'], [class^='form'] .error-fields input[type='number'], [class^='form'] .error-fields input[type='tel'], [class^='form'] .error-fields input[type='date'], [class^='form'] .error-fields input[type='datetime-local'], [class^='form'] .error-fields input[type='month'], [class^='form'] .error-fields select, [class^='form'] .error-fields textarea {
   border: 1px solid adjust-lightness(#b32d20, 10%);
   background: adjust-lightness(#b32d20, 42%);
 }
@@ -7693,7 +7693,7 @@ dl[class*='list-'] dd, dl.list dd {
   margin: 0 auto;
   padding: 0;
   background: white;
-  font: bold 14px "Century Gothic", Arial, sans-serif;
+  font: bold 14px 'Century Gothic', Arial, sans-serif;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
