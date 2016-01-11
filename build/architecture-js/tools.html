@@ -419,73 +419,72 @@
     <section class="box-background">
         <h2>FrontendTools.loadCSS</h2>
         <p>Attach the sPathCss to the dom if it's not already attached.</p>
-        <pre><code data-fc-modules="code">FrontendTools.loadCSS = function ( sCssPath, sCssMedia ) {
-
-
-	/*!
-	 loadCSS: load a CSS file asynchronously.
-	 [c]2015 @scottjehl, Filament Group, Inc.
-	 Licensed MIT
-	 */
-	(function(w){
-		"use strict";
-		/* exported loadCSS */
-		var loadCSS = function( href, before, media ){
-			// Arguments explained:
-			// `href` [REQUIRED] is the URL for your CSS file.
-			// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
-			// By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
-			// `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
-			var doc = w.document;
-			var ss = doc.createElement( "link" );
-			var ref;
-			if( before ){
-				ref = before;
-			}
-			else {
-				var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-				ref = refs[ refs.length - 1];
-			}
-
-			var sheets = doc.styleSheets;
-			ss.rel = "stylesheet";
-			ss.href = href;
-			// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
-			ss.media = "only x";
-
-			// Inject link
-			// Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
-			// Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
-			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-			// A method (exposed on return object for external use) that mimics onload by polling until document.styleSheets until it includes the new sheet.
-			var onloadcssdefined = function( cb ){
-				var resolvedHref = ss.href;
-				var i = sheets.length;
-				while( i-- ){
-					if( sheets[ i ].href === resolvedHref ){
-						return cb();
-					}
-				}
-				setTimeout(function() {
-					onloadcssdefined( cb );
-				});
-			};
-
-			// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
-			ss.onloadcssdefined = onloadcssdefined;
-			onloadcssdefined(function() {
-				ss.media = media || "all";
-			});
-			return ss;
-		};
-		// commonjs
-		if( typeof module !== "undefined" ){
-			module.exports = loadCSS;
+        <pre><code data-fc-modules="code">/*!
+ loadCSS: load a CSS file asynchronously.
+ [c]2015 @scottjehl, Filament Group, Inc.
+ Licensed MIT
+ */
+(function(w){
+	"use strict";
+	/* exported loadCSS */
+	var loadCSS = function( href, media, before ){
+		// Arguments explained:
+		// `href` [REQUIRED] is the URL for your CSS file.
+		// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+		// By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+		// `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
 		}
 		else {
-			w.loadCSS = loadCSS;
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
 		}
-	}( typeof global !== "undefined" ? global : this ));
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+		ss.media = "only x";
+
+		// Inject link
+		// Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+		// Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		// A method (exposed on return object for external use) that mimics onload by polling until document.styleSheets until it includes the new sheet.
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		// once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined(function() {
+			ss.media = media || "all";
+		});
+		return ss;
+	};
+	// commonjs
+	if( typeof module !== "undefined" ){
+		module.exports = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+
+FrontendTools.loadCSS = function ( sCssPath, sCssMedia ) {
 
 	var sId = sCssPath.replace('/',''),
 		fMatchMedia = window.matchMedia,
@@ -612,7 +611,7 @@ FrontendTools.trackPage = function( sPage ) {
         </div>
         <div class="col-2-4">
             <p><a title="Frontend Core" href="../index.html" class="logo mr-m"><img src="..//static/img/logo-frontendcore.png" class="va-m" alt="FRONTEND CORE" /></a></p>
-            <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.23</span></a></p>
+            <p><a href="../setup/download.html" class="button-ok button-fat icon-download pv-m ta-l">Download & Installation <br/><span class="fz-default fw-n pl-l d-ib">&nbsp;&nbsp;&nbsp;Current release 1.7.24</span></a></p>
         </div>
     </div>
 </footer>
@@ -638,13 +637,13 @@ FrontendTools.trackPage = function( sPage ) {
         sPathJsLibs : '..//static/js/libs/',
         sPathCss: '..//static/css/',
         bResponsiveImages: true,
-        sHash : '1723',
+        sHash : '1724',
         oCss: {
-            '..//static/css/main.css?v=1723' : 'all'
+            '..//static/css/main.css?v=1724' : 'all'
         }
     }
 </script>
-<script async="async" src="..//static/js/core.js?v=1723"></script>
+<script async="async" src="..//static/js/core.js?v=1724"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
