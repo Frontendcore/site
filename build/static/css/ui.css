@@ -1041,7 +1041,7 @@ NUMBERS AFTER THE DASH
   float: right;
 }
 
-#cart-list .itemRow:nth-child(even), #cart-list .item-row:nth-child(even) {
+#cart-list .itemRow:nth-child(even, even), #cart-list .item-row:nth-child(even, even) {
   background: #f4f2f2;
 }
 
